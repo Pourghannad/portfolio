@@ -27,5 +27,7 @@
 - khat video ->  website | design: pourghannad | code: pourghanad 
 - perspolis fan -> website | design: pourghanad | code: pourghannad (wordpress)
 - ircardshop -> website | design: pourghanad | code: pourghanad (freer)
-- tanaz -> wordpress template | design: pourghanad | code: pourghannad (alireza arvin)
+- tanaz -> wordpress template | design: pourghanad | code: alireza arvin (wordpress)
+- design team 90theme -> website | design: pourghannad | code: pourghanad (html)
+- 90theme 1.2 -> website | design: pourghanad | code: pourghanad (wordpress) | 2014
 

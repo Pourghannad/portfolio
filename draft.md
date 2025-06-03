@@ -11,7 +11,7 @@
 - iranvpn -> gif banner | 2015
 - corederoma -> website | design: pourghannad, code: pourghannad (wordpress) | 2015
 - avawebgostar -> gif banner | 2015
-- unkown v1 -> wordpress template, code: pourghannad | 2015
+- unknown v1 -> wordpress template, code: pourghannad | 2015
 - cloudha -> gif banner | 2015
 - iran news -> website, code: pourghannad (wordpress) | 2015
 - modemardan -> gif banner | 2015
@@ -41,11 +41,3 @@
 - design team 90theme v2 -> website | design: pourghannad | code: pourghanad (html) | 2016
 - mehrnegar -> wordpress template | design: arvin | codde: pourghannad | 2016
 - entertainment database | website | design: pourghanad | code: pourghanad | 2016
-
-
-
-
-<!-- @font-face{
-	font-family:'yekan';
-	src:url('https://4896.top/y.woff') format('woff')
-} -->

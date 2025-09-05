@@ -26,7 +26,7 @@ const htmlPluginEntries = templateFiles.map(
       hash: false,
       filename: template.output,
       template: path.resolve(environment.paths.source, template.input),
-      favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
+      // favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
     })
 );
 
@@ -119,14 +119,6 @@ module.exports = {
         {
           from: path.resolve(environment.paths.source, 'images', 'content'),
           to: path.resolve(environment.paths.output, 'images', 'content'),
-          toType: 'dir',
-          globOptions: {
-            ignore: ['*.DS_Store', 'Thumbs.db'],
-          },
-        },
-        {
-          from: path.resolve(environment.paths.source, 'videos'),
-          to: path.resolve(environment.paths.output, 'videos'),
           toType: 'dir',
           globOptions: {
             ignore: ['*.DS_Store', 'Thumbs.db'],

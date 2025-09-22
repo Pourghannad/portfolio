@@ -592,4 +592,16 @@ const portfolio = [
     link: "https://pourghannad.github.io/BaninaB-website/#/fa",
     image: [],
   },
+  {
+    name: "Gtick",
+    type: "pwa",
+    technology: ["react", "react-router", "webpack", "leaflet", ""],
+    design: "Behnam Sobhkhiz",
+    development: "Pourghannad",
+    platform: [],
+    description: "",
+    createdAt: "2018",
+    link: "",
+    image: [],
+  },
 ];

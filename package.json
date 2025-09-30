@@ -60,6 +60,6 @@
   },
   "target": "web",
   "dependencies": {
-    "@pourghannad/dopdots": "^1.0.1"
+    "@pourghannad/dopdots": "1.0.2"
   }
 }

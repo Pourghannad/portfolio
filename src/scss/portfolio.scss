@@ -1,6 +1,24 @@
 body {
   background: $body-background-color;
+  // background: #51576a;
+  // background: #304b51;
+  // background: #363c4f;
   color: $foreground-color;
-  font-family: 'DINP-R', arial, serif;
+  font-family: "DINP-R", arial, serif;
   font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+main {
+  .canvas-wrapper {
+    box-shadow: 0px 0px 9px 6px inset #0000001c;
+    position: relative;
+    overflow: hidden;
+    canvas {
+      transform: translate3d(-2px, 0px, 0);
+    }
+  }
 }

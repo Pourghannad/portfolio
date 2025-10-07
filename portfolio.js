@@ -714,4 +714,16 @@ const portfolio = [
     link: "",
     image: ["./images/img/address-v-2-1.png", "./images/img/address-v-2-2.png"],
   },
+    {
+    name: "the-gate",
+    type: "pwa",
+    design: "",
+    development: "Pourghannad",
+    technology: ["react", "react-router", "webpack", "i18n"],
+    platform: [],
+    description: "",
+    createdAt: "2019",
+    link: "",
+    image: ["./images/img/the-gate.png"],
+  },
 ];

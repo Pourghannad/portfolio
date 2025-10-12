@@ -894,7 +894,7 @@ const portfolio = [
     link: "",
     image: [""],
   },
-    {
+  {
     name: "karaz care",
     type: "website",
     design: "karaz design team",
@@ -904,5 +904,16 @@ const portfolio = [
     memberOfTeam: true,
     link: "",
     image: ["./images/img/karaz-care.png", "./images/img/karaz-care-2.png"],
+  },
+  {
+    name: "Ucube landing",
+    type: "website",
+    design: "Bahar Arsooni",
+    technology: ["react", "scss", "react-helmet"],
+    description: "",
+    createdAt: "2024",
+    memberOfTeam: true,
+    link: "https://youcube.ai/",
+    image: ["./images/img/ucube-landing.png"],
   },
 ];

@@ -946,6 +946,7 @@ const portfolio = [
     technology: [
       "react",
       "typescript",
+      "vite",
       "react-query",
       "scss-modules",
       "react-hook-form",
@@ -968,6 +969,7 @@ const portfolio = [
       "react-hook-form",
       "orval",
       "react-router-framework",
+      "semantic-release",
       "workbox",
       "shadcn",
       "graphql",
@@ -980,6 +982,32 @@ const portfolio = [
       "./images/img/hamrahtel-app.png",
       "./images/img/hamrahtel-app-2.png",
       "./images/img/hamrahtel-app-3.png",
+    ],
+  },
+  {
+    name: "Hamrahtel backoffice",
+    type: "website",
+    design: "Hamrahtel Design team",
+    technology: [
+      "react",
+      "typescript",
+      "vite",
+      "react-query",
+      "material-ui",
+      "react-hook-form",
+      "semantic-release",
+      "workbox",
+      "apollo",
+      "orval",
+      "graphql",
+      "i18n"
+    ],
+    description: "",
+    createdAt: "2025",
+    memberOfTeam: true,
+    link: "https://admin.hamrahtel.com/",
+    image: [
+      "./images/img/hamrahtel-admin.png",
     ],
   },
 ];

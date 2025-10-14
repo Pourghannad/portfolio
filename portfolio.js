@@ -998,7 +998,6 @@ const portfolio = [
       "semantic-release",
       "workbox",
       "apollo",
-      "orval",
       "graphql",
       "i18n"
     ],
@@ -1008,6 +1007,30 @@ const portfolio = [
     link: "https://admin.hamrahtel.com/",
     image: [
       "./images/img/hamrahtel-admin.png",
+    ],
+  },
+    {
+    name: "Hamrahtel warehouse",
+    type: "website",
+    design: "Hamrahtel Design team",
+    technology: [
+      "react",
+      "typescript",
+      "vite",
+      "react-query",
+      "material-ui",
+      "react-hook-form",
+      "semantic-release",
+      "workbox",
+      "orval",
+      "i18n"
+    ],
+    description: "",
+    createdAt: "2025",
+    memberOfTeam: true,
+    link: "https://warehouse.hamrahtel.com/",
+    image: [
+      "./images/img/hamrahtel-warehouse.png",
     ],
   },
 ];

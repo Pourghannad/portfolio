@@ -999,17 +999,15 @@ const portfolio = [
       "workbox",
       "apollo",
       "graphql",
-      "i18n"
+      "i18n",
     ],
     description: "",
     createdAt: "2025",
     memberOfTeam: true,
     link: "https://admin.hamrahtel.com/",
-    image: [
-      "./images/img/hamrahtel-admin.png",
-    ],
+    image: ["./images/img/hamrahtel-admin.png"],
   },
-    {
+  {
     name: "Hamrahtel warehouse",
     type: "website",
     design: "Hamrahtel Design team",
@@ -1023,14 +1021,34 @@ const portfolio = [
       "semantic-release",
       "workbox",
       "orval",
-      "i18n"
+      "i18n",
     ],
     description: "",
     createdAt: "2025",
     memberOfTeam: true,
     link: "https://warehouse.hamrahtel.com/",
-    image: [
-      "./images/img/hamrahtel-warehouse.png",
+    image: ["./images/img/hamrahtel-warehouse.png"],
+  },
+  {
+    name: "gsm.ir backoffice",
+    type: "website",
+    design: "Hamrahtel Design team",
+    technology: [
+      "react",
+      "typescript",
+      "vite",
+      "react-query",
+      "material-ui",
+      "react-hook-form",
+      "semantic-release",
+      "workbox",
+      "orval",
+      "i18n",
     ],
+    description: "",
+    createdAt: "2025",
+    memberOfTeam: true,
+    link: "https://gbo.gsm.ir/",
+    image: [],
   },
 ];

@@ -1,12 +1,15 @@
 import "./App.css";
-import Card from "./components/Card/Card";
+import Header from "./components/Header/Header";
+import List from "./components/List/List";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div>
-      Portfolio
-      <Card />
-    </div>
+    <main>
+      <Header />
+      <List />
+      <Footer />
+    </main>
   );
 }
 

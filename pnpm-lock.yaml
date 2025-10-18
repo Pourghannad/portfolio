@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@pourghannad/dopdots':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.4
+        version: 1.0.4
       react:
         specifier: ^19.1.1
         version: 19.2.0
@@ -463,8 +463,8 @@ packages:
     resolution: {integrity: sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg==}
     engines: {node: '>= 10.0.0'}
 
-  '@pourghannad/dopdots@1.0.2':
-    resolution: {integrity: sha512-ZKWsIxk7B2D35vMqrn/uU0OOMTAxghDUySuAcaeEobn7xpFnbHCuKrjXnxTcaVtTvBojj2AU67m8W36ogtlJEQ==}
+  '@pourghannad/dopdots@1.0.4':
+    resolution: {integrity: sha512-FsBKMLnzbukE/Z6f5tlCKwBqs2Jm25iSoV1Yhi12+yfPIeq9tOdpmmJ+82SUBFysnC1ZLuGk7m3SKduXbI6SYA==}
 
   '@rolldown/pluginutils@1.0.0-beta.38':
     resolution: {integrity: sha512-N/ICGKleNhA5nc9XXQG/kkKHJ7S55u0x0XUJbbkmdCnFuoRkM1Il12q9q0eX19+M7KKUEPw/daUPIRnxhcxAIw==}
@@ -1580,7 +1580,7 @@ snapshots:
       '@parcel/watcher-win32-x64': 2.5.1
     optional: true
 
-  '@pourghannad/dopdots@1.0.2': {}
+  '@pourghannad/dopdots@1.0.4': {}
 
   '@rolldown/pluginutils@1.0.0-beta.38': {}
 

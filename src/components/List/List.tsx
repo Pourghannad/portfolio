@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import style from "./list.module.scss";
 import dopDots from "@pourghannad/dopdots";
+import { Carousel } from "../Carousel/Carousel";
+import clsx from "clsx";
 
 export default function List() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -14,7 +16,7 @@ export default function List() {
   }, []);
   return (
     <div className={style["list-container"]}>
-      <div className="dopdots-wrapper">
+      <div className={clsx("dopdots-wrapper", style["dopdots"])}>
         <canvas
           ref={canvasRef}
           id="dopdots"
@@ -22,15 +24,16 @@ export default function List() {
           height="400px"
           data-margin="10"
           data-type="grid"
-          data-elementsize="6"
-          data-color="#3c3c3c"
+          data-elementsize="8"
+          data-color="#ffffffaa"
           data-elementrect="true"
           data-secondrect="true"
           data-elementformousemove=".dopdots-wrapper"
-          data-moveradius="300"
+          data-moveradius="30"
           data-secondColor="#0c130b"
         ></canvas>
       </div>
+      <Carousel />
     </div>
   );
 }

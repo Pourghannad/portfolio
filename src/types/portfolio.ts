@@ -3,8 +3,10 @@ export interface IPortfolio {
     type: string;
     design: string;
     development: string;
-    platform: string[];
+    platform?: string[];
     description: string;
     link: string;
     image: string[];
+    memberOfTeam?: boolean;
+    technology?: (string | undefined)[];
 }

@@ -634,7 +634,7 @@ export const portfolio = [
   {
     name: "dopdots",
     type: "open-source",
-    technology: ["VanillaJs", , "canvas"],
+    technology: ["VanillaJs", "canvas"],
     design: "Pourghannad",
     development: "Pourghannad",
     description: "",

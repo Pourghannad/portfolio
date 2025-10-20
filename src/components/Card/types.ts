@@ -1,5 +1,5 @@
-import type { ReactElement } from "react";
+import type { IPortfolio } from "../../types/portfolio";
 
 export interface ICardProps {
-    children: ReactElement;
+    data: IPortfolio;
 }

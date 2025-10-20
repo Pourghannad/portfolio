@@ -6,7 +6,7 @@ export interface IPortfolio {
     platform?: string[];
     description: string;
     link: string;
-    image: string[];
+    images: string[];
     memberOfTeam?: boolean;
     technology?: (string | undefined)[];
 }

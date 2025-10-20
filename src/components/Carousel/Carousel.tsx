@@ -4,8 +4,8 @@ import style from "./carousel.module.scss";
 import { portfolio } from "../../portfolio";
 
 export function Carousel() {
-  const [emblaRef] = useEmblaCarousel({ axis: "y" });
-  // const [emblaRef] = useEmblaCarousel();
+  // const [emblaRef] = useEmblaCarousel({ axis: "y" });
+  const [emblaRef] = useEmblaCarousel();
 
   return (
     <div className={style["embla"]} ref={emblaRef}>

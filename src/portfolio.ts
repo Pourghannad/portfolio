@@ -8,7 +8,7 @@ export const portfolio = [
     description: "",
     createdAt: "2013",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "90theme 1.2",
@@ -19,7 +19,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "WNovin",
@@ -30,7 +30,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: ["./wnovin.gif"],
+    images: ["./img/wnovin.gif"],
   },
   {
     name: "MihanIT",
@@ -41,7 +41,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: ["./mihanit.gif"],
+    images: ["./img/mihanit.gif"],
   },
   {
     name: "ArkaNet",
@@ -52,7 +52,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: ["./arkanet.gif"],
+    images: ["./img/arkanet.gif"],
   },
   {
     name: "Pourghannad.ir-v1",
@@ -63,7 +63,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: ["./img/Pourghannad-ir-v1.png"],
+    images: ["./img/pourghannad-ir-v1.png"],
   },
   {
     name: "skimoo",
@@ -74,7 +74,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: ["./images/img/skimoo.png"],
+    images: ["./img/skimoo.png"],
   },
   {
     name: "80200",
@@ -85,7 +85,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: ["./img/80200.jpg"],
+    images: ["./img/80200.jpg"],
   },
   {
     name: "loxit",
@@ -96,7 +96,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "20script froum",
@@ -107,7 +107,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "MMMusic",
@@ -118,7 +118,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "iranvpn",
@@ -129,7 +129,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "corederoma",
@@ -140,7 +140,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: ["./img/corederoma.jpg"],
+    images: ["./img/corederoma.jpg"],
   },
   {
     name: "avawebgostar",
@@ -151,7 +151,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "unknown v1",
@@ -162,7 +162,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "cloudha",
@@ -173,7 +173,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: ["./cloudha.gif"],
+    images: ["./cloudha.gif"],
   },
   {
     name: "iran news",
@@ -184,7 +184,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "modemardan",
@@ -195,7 +195,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "khatblog",
@@ -206,7 +206,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "diri",
@@ -217,7 +217,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "uploadbit",
@@ -228,7 +228,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "learnspot",
@@ -239,7 +239,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "tarahanweb",
@@ -250,7 +250,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "tamindisk",
@@ -261,7 +261,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "zhost",
@@ -272,7 +272,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "giyahan daroee",
@@ -283,7 +283,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "appleir",
@@ -294,7 +294,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "roid",
@@ -305,7 +305,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "niazmandiha",
@@ -316,7 +316,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "data98",
@@ -327,7 +327,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "8data",
@@ -338,7 +338,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "90theme upload center",
@@ -349,7 +349,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "nardeban bandegi",
@@ -360,7 +360,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "khat video",
@@ -371,7 +371,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "perspolis fan",
@@ -382,7 +382,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "ircardshop",
@@ -393,7 +393,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "tanaz",
@@ -404,7 +404,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "design team 90theme",
@@ -415,7 +415,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "enviar",
@@ -426,7 +426,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "90theme v2",
@@ -437,7 +437,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "bazitak.ir",
@@ -448,7 +448,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "iranian bank logo",
@@ -458,7 +458,7 @@ export const portfolio = [
     description: "iranian bank logo with svg and css animation",
     createdAt: "2016",
     link: "https://pourghannad.github.io/iranian-bank-logo/",
-    image: [],
+    images: [],
   },
   {
     name: "design team 90theme v2",
@@ -469,7 +469,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "mehrnegar",
@@ -480,7 +480,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "oudlajan",
@@ -491,7 +491,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    image: ["./img/oudlajan.png"],
+    images: ["./img/oudlajan.png"],
   },
   {
     name: "tolidat melli",
@@ -503,7 +503,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: ["./img/tolidat-melli.png"],
+    images: ["./img/tolidat-melli.png"],
   },
   {
     name: "Cretively",
@@ -514,7 +514,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: ["./img/cretively.jpg"],
+    images: ["./img/cretively.jpg"],
   },
   {
     name: "food-center",
@@ -525,7 +525,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: ["./img/food-center.jpg"],
+    images: ["./img/food-center.jpg"],
   },
   {
     name: "unknown v2",
@@ -536,7 +536,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    image: ["./img/unknown-v2.jpg"],
+    images: ["./img/unknown-v2.jpg"],
   },
   {
     name: "entertainment database",
@@ -547,7 +547,7 @@ export const portfolio = [
     description: "",
     createdAt: "2017",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "afzir customers panel",
@@ -558,7 +558,7 @@ export const portfolio = [
     description: "",
     createdAt: "2017",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "Baniguard 1",
@@ -571,7 +571,7 @@ export const portfolio = [
     description: "",
     createdAt: "2017",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "DCMON 1",
@@ -584,7 +584,7 @@ export const portfolio = [
     description: "",
     createdAt: "2017",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "Baniguard 2",
@@ -597,7 +597,7 @@ export const portfolio = [
     description: "",
     createdAt: "2017",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "DCMON 2",
@@ -610,13 +610,13 @@ export const portfolio = [
     description: "",
     createdAt: "2017",
     link: "",
-    image: [
-      "./images/img/dcmon-1.png",
-      "./images/img/dcmon-2.png",
-      "./images/img/dcmon-3.png",
-      "./images/img/dcmon-4.png",
-      "./images/img/dcmon-5.png",
-      "./images/img/dcmon-6.png",
+    images: [
+      "./img/dcmon-1.png",
+      "./img/dcmon-2.png",
+      "./img/dcmon-3.png",
+      "./img/dcmon-4.png",
+      "./img/dcmon-5.png",
+      "./img/dcmon-6.png",
     ],
   },
   {
@@ -629,7 +629,7 @@ export const portfolio = [
     description: "",
     createdAt: "2017",
     link: "https://pourghannad.github.io/BaninaB-website/#/fa",
-    image: [],
+    images: [],
   },
   {
     name: "dopdots",
@@ -640,7 +640,7 @@ export const portfolio = [
     description: "",
     createdAt: "2018",
     link: "https://pourghannad.github.io/dopdots/",
-    image: ["./images/img/dopdots.png"],
+    images: ["./img/dopdots.png"],
   },
   {
     name: "Gtick",
@@ -652,7 +652,7 @@ export const portfolio = [
     description: "",
     createdAt: "2018",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "3Mahi",
@@ -663,7 +663,7 @@ export const portfolio = [
     description: "",
     createdAt: "2018",
     link: "",
-    image: ["./images/img/3mahi.png"],
+    images: ["./img/3mahi.png"],
   },
   {
     name: "Address v1",
@@ -674,7 +674,7 @@ export const portfolio = [
     description: "",
     createdAt: "2018",
     link: "",
-    image: ["./images/img/address-v-1.png"],
+    images: ["./img/address-v-1.png"],
   },
   {
     name: "Address Backoffice",
@@ -685,7 +685,7 @@ export const portfolio = [
     description: "",
     createdAt: "2018",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "Address Backoffice v2 (Jahan 🌎)",
@@ -696,7 +696,7 @@ export const portfolio = [
     description: "",
     createdAt: "2019",
     link: "",
-    image: [],
+    images: [],
   },
   {
     name: "Address v2",
@@ -716,10 +716,10 @@ export const portfolio = [
     description: "",
     createdAt: "2019",
     link: "",
-    image: [
-      "./images/img/address-v2-1.png",
-      "./images/img/address-v2-2.png",
-      "./images/img/address-v2-3.png",
+    images: [
+      "./img/address-v2-1.png",
+      "./img/address-v2-2.png",
+      "./img/address-v2-3.png",
     ],
   },
   {
@@ -739,7 +739,7 @@ export const portfolio = [
     description: "",
     createdAt: "2019",
     link: "",
-    image: ["./images/img/the-gate.png"],
+    images: ["./img/the-gate.png"],
   },
   {
     name: "Address pwa",
@@ -758,7 +758,7 @@ export const portfolio = [
     description: "",
     createdAt: "2020",
     link: "",
-    image: ["./images/img/address-pwa-1.png"],
+    images: ["./img/address-pwa-1.png"],
   },
   {
     name: "Hubber dashboard",
@@ -777,7 +777,7 @@ export const portfolio = [
     description: "",
     createdAt: "2020",
     link: "",
-    image: ["./images/img/hubber.png"],
+    images: ["./img/hubber.png"],
   },
   {
     name: "Gooya personal website",
@@ -788,7 +788,7 @@ export const portfolio = [
     description: "",
     createdAt: "2020",
     link: "https://pourghannad.github.io/gooyahiphop/",
-    image: ["./images/img/gooya.png"],
+    images: ["./img/gooya.png"],
   },
   {
     name: "4896 animated logo",
@@ -799,7 +799,7 @@ export const portfolio = [
     description: "",
     createdAt: "2021",
     link: "https://4896.top",
-    image: ["./images/img/4896.png"],
+    images: ["./img/4896.png"],
   },
   {
     name: "Aparat2",
@@ -817,7 +817,7 @@ export const portfolio = [
     memberOfTeam: true,
     createdAt: "2021",
     link: "https://aparat.com",
-    image: ["./images/img/aparat.png"],
+    images: ["./img/aparat.png"],
   },
   {
     name: "sc-weather",
@@ -828,7 +828,7 @@ export const portfolio = [
     description: "",
     createdAt: "2021",
     link: "https://azardnet.github.io/sc-weather/",
-    image: ["./images/img/sc-weather.png"],
+    images: ["./img/sc-weather.png"],
   },
   {
     name: "Sabaidea SSO V2",
@@ -839,7 +839,7 @@ export const portfolio = [
     memberOfTeam: true,
     createdAt: "2022",
     link: "https://www.filimo.com/signin",
-    image: ["./images/img/sabaidea-sso.png"],
+    images: ["./img/sabaidea-sso.png"],
   },
   {
     name: "5Page",
@@ -850,7 +850,7 @@ export const portfolio = [
     description: "",
     createdAt: "2022",
     link: "https://pourghannad.github.io/5page/",
-    image: ["./images/img/5page.png"],
+    images: ["./img/5page.png"],
   },
   {
     name: "5Page",
@@ -861,7 +861,7 @@ export const portfolio = [
     description: "",
     createdAt: "2022",
     link: "https://pourghannad.github.io/5page/",
-    image: ["./images/img/5page.png"],
+    images: ["./img/5page.png"],
   },
   {
     name: "Carriot backoffice",
@@ -872,7 +872,7 @@ export const portfolio = [
     memberOfTeam: true,
     createdAt: "2023",
     link: "https://panel.carriot.ir/login",
-    image: ["./images/img/carriot.png"],
+    images: ["./img/carriot.png"],
   },
   {
     name: "rapidpacecrm",
@@ -883,7 +883,7 @@ export const portfolio = [
     memberOfTeam: true,
     createdAt: "2023",
     link: "https://rapidpacecrm.com",
-    image: ["./images/img/rapidpace.png"],
+    images: ["./img/rapidpace.png"],
   },
   {
     name: "rapidpacecrm panel",
@@ -894,7 +894,7 @@ export const portfolio = [
     memberOfTeam: true,
     createdAt: "2023",
     link: "",
-    image: ["./images/img/urm.png"],
+    images: ["./img/urm.png"],
   },
   {
     name: "karaz data panel",
@@ -904,7 +904,7 @@ export const portfolio = [
     description: "",
     createdAt: "2024",
     link: "",
-    image: [""],
+    images: [],
   },
   {
     name: "karaz care",
@@ -915,7 +915,7 @@ export const portfolio = [
     createdAt: "2024",
     memberOfTeam: true,
     link: "",
-    image: ["./images/img/karaz-care.png", "./images/img/karaz-care-2.png"],
+    images: ["./img/karaz-care.png", "./img/karaz-care-2.png"],
   },
   {
     name: "panj.monster",
@@ -926,7 +926,7 @@ export const portfolio = [
     description: "",
     createdAt: "2021",
     link: "https://pourghannad.github.io/panj.monster/",
-    image: ["./images/img/panj-monster.png"],
+    images: ["./img/panj-monster.png"],
   },
   {
     name: "youCube landing",
@@ -937,7 +937,7 @@ export const portfolio = [
     createdAt: "2024",
     memberOfTeam: true,
     link: "https://youcube.ai/",
-    image: ["./images/img/ucube-landing.png"],
+    images: ["./img/ucube-landing.png"],
   },
   {
     name: "youCube twa",
@@ -956,7 +956,7 @@ export const portfolio = [
     createdAt: "2024",
     memberOfTeam: true,
     link: "https://app.youcube.ai",
-    image: ["./images/img/youcube.png", "./images/img/youcube2.png"],
+    images: ["./img/youcube.png", "./img/youcube2.png"],
   },
   {
     name: "Hamrahtel pwa",
@@ -980,10 +980,10 @@ export const portfolio = [
     createdAt: "2025",
     memberOfTeam: true,
     link: "https://app.hamrahtel.com/",
-    image: [
-      "./images/img/hamrahtel-app.png",
-      "./images/img/hamrahtel-app-2.png",
-      "./images/img/hamrahtel-app-3.png",
+    images: [
+      "./img/hamrahtel-app.png",
+      "./img/hamrahtel-app-2.png",
+      "./img/hamrahtel-app-3.png",
     ],
   },
   {
@@ -1008,7 +1008,7 @@ export const portfolio = [
     createdAt: "2025",
     memberOfTeam: true,
     link: "https://admin.hamrahtel.com/",
-    image: ["./images/img/hamrahtel-admin.png"],
+    images: ["./img/hamrahtel-admin.png"],
   },
   {
     name: "Hamrahtel warehouse",
@@ -1031,7 +1031,7 @@ export const portfolio = [
     createdAt: "2025",
     memberOfTeam: true,
     link: "https://warehouse.hamrahtel.com/",
-    image: ["./images/img/hamrahtel-warehouse.png"],
+    images: ["./img/hamrahtel-warehouse.png"],
   },
   {
     name: "gsm.ir backoffice",
@@ -1054,7 +1054,7 @@ export const portfolio = [
     createdAt: "2025",
     memberOfTeam: true,
     link: "https://gbo.gsm.ir/",
-    image: [],
+    images: [],
   },
   {
     name: "Hamrahtel App Landing",
@@ -1065,7 +1065,7 @@ export const portfolio = [
     description: "",
     createdAt: "2025",
     link: "https://hamrahtel.com/app",
-    image: ["./images/img/hamrahtel-app-landing.png"],
+    images: ["./img/hamrahtel-app-landing.png"],
   },
   {
     name: "Hamrahtel Incredibles Landing",
@@ -1076,6 +1076,6 @@ export const portfolio = [
     description: "",
     createdAt: "2025",
     link: "https://hamrahtel.com/incredibles",
-    image: ["./images/img/hamrahtel-incredibles-landing.png"],
+    images: ["./img/hamrahtel-incredibles-landing.png"],
   },
 ];

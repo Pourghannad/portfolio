@@ -28,8 +28,6 @@ export default function List() {
           data-color="#ffffffaa"
           data-elementrect="true"
           data-secondrect="true"
-          data-elementformousemove=".dopdots-wrapper"
-          data-moveradius="30"
           data-secondColor="#0c130b"
         ></canvas>
       </div>

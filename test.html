@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background: #000;
+        }
+        canvas { 
+            display: block; 
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/"
+        }
+    }
+    </script>
+    
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        // Scene setup
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x001122);
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ 
+            antialias: true,
+            powerPreference: "high-performance"
+        });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        document.body.appendChild(renderer.domElement);
+        
+        // OrbitControls
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.1;
+        controls.rotateSpeed = 0.5;
+        controls.zoomSpeed = 0.8;
+        controls.panSpeed = 0.5;
+        controls.enableRotate = false;
+        controls.screenSpacePanning = true;
+        controls.minDistance = 2;
+        controls.maxDistance = 20;
+        
+        // Clean lighting for precise visualization
+        const ambientLight = new THREE.AmbientLight(0x404080, 0.4);
+        scene.add(ambientLight);
+        
+        const mainLight = new THREE.DirectionalLight(0xffffff, 1.0);
+        mainLight.position.set(10, 10, 10);
+        scene.add(mainLight);
+        
+        const fillLight = new THREE.DirectionalLight(0x4488ff, 0.3);
+        fillLight.position.set(-10, 5, -5);
+        scene.add(fillLight);
+        
+        // Perfectly organized dots - precise measurements
+        const dotWidth = 0.08;
+        const dotHeight = 0.08;
+        const dotDepth = 0.02;
+        const margin = 0.12; // Consistent margin on all sides
+        
+        // Create a perfectly aligned grid
+        const cols = 12;
+        const rows = 8;
+        const dotCount = cols * rows;
+        
+        // Calculate total grid dimensions
+        const totalWidth = (cols * dotWidth) + ((cols - 1) * margin);
+        const totalHeight = (rows * dotHeight) + ((rows - 1) * margin);
+        const startX = -totalWidth / 2 + dotWidth / 2;
+        const startY = totalHeight / 2 - dotHeight / 2; // Start from top
+        
+        console.log(`Grid: ${cols} columns × ${rows} rows`);
+        console.log(`Total width: ${totalWidth.toFixed(2)}, Total height: ${totalHeight.toFixed(2)}`);
+        console.log(`Dot size: ${dotWidth.toFixed(2)} × ${dotHeight.toFixed(2)}`);
+        console.log(`Margin: ${margin.toFixed(2)}`);
+        
+        // Blue material for precise dots
+        const blueMaterial = new THREE.MeshPhongMaterial({ 
+            color: 0x0066ff,
+            shininess: 100,
+            specular: 0x2222ff
+        });
+        
+        // Create perfectly aligned dots (no grid lines or crosshair)
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                const x = startX + (col * (dotWidth + margin));
+                const y = startY - (row * (dotHeight + margin));
+                const z = 0; // All dots on the same Z plane for perfect alignment
+                
+                const geometry = new THREE.BoxGeometry(dotWidth, dotHeight, dotDepth, 1, 1, 1);
+                const dot = new THREE.Mesh(geometry, blueMaterial);
+                dot.position.set(x, y, z);
+                
+                // NO rotation - perfectly aligned with world axes
+                dot.rotation.x = 0;
+                dot.rotation.y = 0;
+                dot.rotation.z = 0;
+                
+                scene.add(dot);
+            }
+        }
+        
+        // Camera position - perfect top-down view initially
+        camera.position.set(0, 0, 5);
+        camera.lookAt(0, 0, 0);
+        
+        // Mouse position and rotation state
+        const mouse = new THREE.Vector2();
+        const targetRotation = new THREE.Vector2();
+        const currentRotation = new THREE.Vector2(0, 0); // Start with no rotation
+        let isMouseMoving = false;
+        let mouseTimeout;
+        
+        // Track mouse movement for hover-based rotation
+        const handleMouseMove = (event) => {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            
+            targetRotation.x = mouse.y * Math.PI * 0.2; // Reduced rotation range
+            targetRotation.y = mouse.x * Math.PI * 0.4;
+            
+            isMouseMoving = true;
+            
+            clearTimeout(mouseTimeout);
+            mouseTimeout = setTimeout(() => {
+                isMouseMoving = false;
+            }, 100);
+        };
+        
+        document.addEventListener('mousemove', handleMouseMove);
+        
+        // Handle window resize
+        const handleResize = () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        };
+        
+        window.addEventListener('resize', handleResize);
+        
+        // Animation loop
+        const animate = () => {
+            requestAnimationFrame(animate);
+            
+            if (isMouseMoving) {
+                currentRotation.x = THREE.MathUtils.lerp(currentRotation.x, targetRotation.x, 0.08);
+                currentRotation.y = THREE.MathUtils.lerp(currentRotation.y, targetRotation.y, 0.08);
+            } else {
+                // Very slow auto-rotation to maintain organization visibility
+                currentRotation.y += 0.001;
+            }
+            
+            const radius = 5;
+            camera.position.x = radius * Math.sin(currentRotation.y) * Math.cos(currentRotation.x);
+            camera.position.y = radius * Math.sin(currentRotation.x);
+            camera.position.z = radius * Math.cos(currentRotation.y) * Math.cos(currentRotation.x);
+            
+            camera.lookAt(0, 0, 0);
+            controls.update();
+            renderer.render(scene, camera);
+        };
+        
+        animate();
+        
+        console.log("Perfectly Organized 3D Grid Ready!");
+        console.log("- 12×8 grid of perfectly aligned rectangles");
+        console.log("- All dots perfectly aligned with world axes");
+        console.log("- Move mouse to rotate and inspect alignment");
+
+    </script>
+</body>
+</html>

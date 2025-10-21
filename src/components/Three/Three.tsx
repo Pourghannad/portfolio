@@ -33,65 +33,86 @@ export default function Three() {
     controls.rotateSpeed = 0.5;
     controls.zoomSpeed = 0.8;
     controls.panSpeed = 0.5;
-    controls.enableRotate = false; // Disable default rotation
+    controls.enableRotate = false;
     controls.screenSpacePanning = true;
     controls.minDistance = 2;
     controls.maxDistance = 20;
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    const ambientLight = new THREE.AmbientLight(0x404080, 0.4);
     scene.add(ambientLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-    directionalLight.position.set(10, 10, 5);
-    scene.add(directionalLight);
+    const mainLight = new THREE.DirectionalLight(0xffffff, 1.0);
+    mainLight.position.set(10, 10, 10);
+    scene.add(mainLight);
 
+    const fillLight = new THREE.DirectionalLight(0x4488ff, 0.3);
+    fillLight.position.set(-10, 5, -5);
+    scene.add(fillLight);
+
+    // Perfectly organized dots - precise measurements
     const dotWidth = 0.08;
     const dotHeight = 0.08;
     const dotDepth = 0.02;
-    const margin = 0.1;
+    const margin = 0.12; // Consistent margin on all sides
 
-    const cols = 20;
-    const rows = 15;
+    const cols = 12;
+    const rows = 8;
     const dotCount = cols * rows;
 
-    // console.log(`Creating ${dotCount} dots (${cols} columns x ${rows} rows)`);
+    const totalWidth = cols * dotWidth + (cols - 1) * margin;
+    const totalHeight = rows * dotHeight + (rows - 1) * margin;
+    const startX = -totalWidth / 2 + dotWidth / 2;
+    const startY = totalHeight / 2 - dotHeight / 2; // Start from top
 
-    const totalWidth = cols * (dotWidth + margin);
-    const totalHeight = rows * (dotHeight + margin);
-    const startX = -totalWidth / 2;
-    const startY = -totalHeight / 2;
+    console.log(`Grid: ${cols} columns × ${rows} rows`);
+    console.log(
+      `Total width: ${totalWidth.toFixed(
+        2
+      )}, Total height: ${totalHeight.toFixed(2)}`
+    );
+    console.log(`Dot size: ${dotWidth.toFixed(2)} × ${dotHeight.toFixed(2)}`);
+    console.log(`Margin: ${margin.toFixed(2)}`);
 
     const blueMaterial = new THREE.MeshPhongMaterial({
-      color: 0x0077ff,
+      color: 0x0066ff,
       shininess: 100,
+      specular: 0x2222ff,
     });
 
-    for (let i = 0; i < dotCount; i++) {
-      const row = Math.floor(i / cols);
-      const col = i % cols;
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        const x = startX + col * (dotWidth + margin);
+        const y = startY - row * (dotHeight + margin);
+        const z = 0; // All dots on the same Z plane for perfect alignment
 
-      const x = startX + col * (dotWidth + margin) + dotWidth / 2;
-      const y = startY + row * (dotHeight + margin) + dotHeight / 2;
-      const z = 0;
+        const geometry = new THREE.BoxGeometry(
+          dotWidth,
+          dotHeight,
+          dotDepth,
+          1,
+          1,
+          1
+        );
+        const dot = new THREE.Mesh(geometry, blueMaterial);
+        dot.position.set(x, y, z);
 
-      const geometry = new THREE.BoxGeometry(dotWidth, dotHeight, dotDepth);
-      const dot = new THREE.Mesh(geometry, blueMaterial);
-      dot.position.set(x, y, z);
+        // NO rotation - perfectly aligned with world axes
+        dot.rotation.x = 0;
+        dot.rotation.y = 0;
+        dot.rotation.z = 0;
 
-      dot.rotation.x = (Math.random() - 0.5) * 0.2;
-      dot.rotation.y = (Math.random() - 0.5) * 0.2;
-
-      scene.add(dot);
+        scene.add(dot);
+      }
     }
 
-    camera.position.set(0, 0, 3);
-
+    // Camera position - perfect top-down view initially
+    camera.position.set(0, 0, 5);
+    camera.lookAt(0, 0, 0);
     const mouse = new THREE.Vector2();
     const targetRotation = new THREE.Vector2();
-    const currentRotation = new THREE.Vector2();
+    const currentRotation = new THREE.Vector2(0, 0); // Start with no rotation
     let isMouseMoving = false;
     let mouseTimeout: number | undefined;
-
     interface MouseMoveHandler {
       (event: MouseEvent): void;
     }
@@ -122,45 +143,28 @@ export default function Three() {
 
     window.addEventListener("resize", handleResize);
 
-    const animate = () => {
-      requestAnimationFrame(animate);
-
-      if (isMouseMoving) {
-        currentRotation.x = THREE.MathUtils.lerp(
-          currentRotation.x,
-          targetRotation.x,
-          0.1
-        );
-        currentRotation.y = THREE.MathUtils.lerp(
-          currentRotation.y,
-          targetRotation.y,
-          0.1
-        );
-      } else {
-        // currentRotation.y += 0.005;
-      }
-
-      const radius = 3;
-      camera.position.x =
-        radius * Math.sin(currentRotation.y) * Math.cos(currentRotation.x);
-      camera.position.y = radius * Math.sin(currentRotation.x);
-      camera.position.z =
-        radius * Math.cos(currentRotation.y) * Math.cos(currentRotation.x);
-
-      camera.lookAt(0, 0, 0);
-
-      controls.update();
-
-      renderer.render(scene, camera);
-    };
-
-    animate();
-
-    console.log("Hover Controls:");
-    console.log("- Move mouse to rotate the camera automatically");
-    console.log("- Mouse wheel: Zoom in/out");
-    console.log("- Right click + drag: Pan camera");
-    console.log(`- Screen filled with ${dotCount} dots`);
+        const animate = () => {
+            requestAnimationFrame(animate);
+            
+            if (isMouseMoving) {
+                currentRotation.x = THREE.MathUtils.lerp(currentRotation.x, targetRotation.x, 0.08);
+                currentRotation.y = THREE.MathUtils.lerp(currentRotation.y, targetRotation.y, 0.08);
+            } else {
+                // Very slow auto-rotation to maintain organization visibility
+                currentRotation.y += 0.001;
+            }
+            
+            const radius = 5;
+            camera.position.x = radius * Math.sin(currentRotation.y) * Math.cos(currentRotation.x);
+            camera.position.y = radius * Math.sin(currentRotation.x);
+            camera.position.z = radius * Math.cos(currentRotation.y) * Math.cos(currentRotation.x);
+            
+            camera.lookAt(0, 0, 0);
+            controls.update();
+            renderer.render(scene, camera);
+        };
+        
+        animate();
 
     return () => {
       if (mountRef.current) {

@@ -226,17 +226,6 @@ export const portfolio = [
     images: ["./img/5page.png"],
   },
   {
-    name: "5Page",
-    type: "open-source",
-    design: "pourghannad",
-    development: "pourghannad",
-    technology: ["react", "scss-modules"],
-    description: "",
-    createdAt: "2022",
-    link: "https://pourghannad.github.io/5page/",
-    images: ["./img/5page.png"],
-  },
-  {
     name: "Sabaidea SSO V2",
     type: "website",
     design: "Sabaidea Design Team",

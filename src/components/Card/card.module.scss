@@ -17,6 +17,7 @@
     opacity: 0.3;
     transition-duration: 250ms;
     transition-property: filter, opacity;
+    z-index: -1;
     &:hover {
       filter: invert(0.1) blur(0px);
       opacity: 0.4;

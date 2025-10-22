@@ -17,8 +17,6 @@
         }
         canvas { 
             display: block; 
-            cursor: move;
-            border: 1px solid #333;
         }
     </style>
 </head>
@@ -156,11 +154,11 @@
         gl.enableVertexAttribArray(aPosition);
 
         // Grid configuration for rectangles
-        const cols = 12;
-        const rows = 8;
-        const rectWidth = 0.08;
-        const rectHeight = 0.06;
-        const spacing = 0.15;
+        const cols = 10;
+        const rows = 10;
+        const rectWidth = 0.035;
+        const rectHeight = 0.035;
+        const spacing = 0.16;
 
         const startX = -(cols - 1) * spacing / 2;
         const startY = -(rows - 1) * spacing / 2;
@@ -254,8 +252,8 @@
 
         canvas.addEventListener('mousemove', (event) => {
             const rect = canvas.getBoundingClientRect();
-            targetMouseX = ((event.clientX - rect.left) / canvas.width) * 2 - 1;
-            targetMouseY = -((event.clientY - rect.top) / canvas.height) * 2 + 1;
+            targetMouseX = ((event.clientX - rect.left) / canvas.width) * 2.2 - 1;
+            targetMouseY = -((event.clientY - rect.top) / canvas.height) * 2.2 + 1;
             
             // Change light color based on mouse position
             lightColor[0] = 0.7 + Math.abs(targetMouseX) * 0.3; // Red
@@ -271,8 +269,8 @@
             gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
             
             // Smooth mouse movement
-            mouseX += (targetMouseX - mouseX) * 0.2;
-            mouseY += (targetMouseY - mouseY) * 0.2;
+            mouseX += (targetMouseX - mouseX) * 0.4;
+            mouseY += (targetMouseY - mouseY) * 0.4;
             
             // Set up projection matrix
             perspective(projectionMatrix, Math.PI / 4, canvas.width / canvas.height, 0.1, 100.0);

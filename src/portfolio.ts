@@ -449,7 +449,7 @@ export const portfolio = [
   {
     name: "BaninaB website",
     type: "website",
-    technology: ["react", null, "webpack"],
+    technology: ["react", "webpack"],
     design: "Pourghannad",
     development: "Pourghannad",
     platform: [],

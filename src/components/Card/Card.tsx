@@ -4,10 +4,17 @@ import type { ICardProps } from "./types";
 export default function Card(props: ICardProps) {
   const { data } = props;
   return (
-    <div className={style["card-container"]}>
+    <div className={style["card"]}>
       {data.name}
-      {data.link && <a href={data.link} target="_blank">Link</a>}
-      {data.images &&
+      {data.link && (
+        <a href={data.link} target="_blank">
+          Link
+        </a>
+      )}
+      {data.images && data.images.length > 0 && (
+        <div className={style["cover"]} style={{backgroundImage: `url(${data.images[0]})`}} />
+      )}
+      {/* {data.images &&
         data.images?.length > 0 &&
         data.images?.map((item, index) => {
           return (
@@ -18,7 +25,7 @@ export default function Card(props: ICardProps) {
               title={`${data.name}-${index}`}
             />
           );
-        })}
+        })} */}
     </div>
   );
 }

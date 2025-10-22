@@ -6,13 +6,14 @@ export default function Card(props: ICardProps) {
   return (
     <div className={style["card-container"]}>
       {data.name}
+      {data.link && <a href={data.link} target="_blank">Link</a>}
       {data.images &&
         data.images?.length > 0 &&
         data.images?.map((item, index) => {
           return (
             <img
+              key={index}
               src={item}
-              key="index"
               alt={`${data.name}-${index}`}
               title={`${data.name}-${index}`}
             />

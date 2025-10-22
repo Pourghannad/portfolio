@@ -3,7 +3,10 @@
 }
 .container {
   display: flex;
+  touch-action: pan-x pinch-zoom;
+  margin-top: 10px;
   height: 200px;
+  flex-direction: column;
 }
 .slide {
   transform: translate3d(0, 0, 0);

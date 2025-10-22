@@ -137,12 +137,12 @@
         gl.enableVertexAttribArray(aNormal);
 
         // Grid configuration
-        const cols = 12;
-        const rows = 8;
+        const cols = 24;
+        const rows = 24;
         const rectWidth = 0.08;
         const rectHeight = 0.08;
         const rectDepth = 0.02; // Added depth for better 3D effect
-        const spacing = 0.15;
+        const spacing = 0.12;
 
         const startX = -(cols - 1) * spacing / 2;
         const startY = -(rows - 1) * spacing / 2;
@@ -409,8 +409,8 @@
             mouseX = ((event.clientX - rect.left) / canvas.width) * 2 - 1;
             mouseY = -((event.clientY - rect.top) / canvas.height) * 2 + 1;
             
-            targetRotationY = mouseX * Math.PI;
-            targetRotationX = mouseY * Math.PI * 0.5;
+            targetRotationY = mouseX * Math.PI / 12;
+            targetRotationX = (mouseY * Math.PI * 0.5) / 12;
             
             // Update light position based on mouse movement
             lightPosition[0] = mouseX * 3;

@@ -7,17 +7,87 @@
     position: relative;
     width: fit-content;
     height: 66px;
+    letter-spacing: 1px;
     line-height: 58px;
     color: #6ddba9;
-    &:before {
+    color: #363c4f;
+    animation-name: title;
+    animation-duration: 150ms;
+    &:before,
+    &:after {
       content: "";
       width: 100%;
-      height: 2px;
+      height: 4px;
       background-color: transparent;
       position: absolute;
       right: 0;
-      top: 52px;
-      box-shadow: 0 2px 0px 0px #363c4f, 0 3px 0px 0px #363c4f;
+      background-color: #363c4f;
+      transform: scale3d(1,1,1);
+    }
+    &:before {
+      bottom: 13px;
+    }
+    &:after {
+      top: 9px;
+    }
+    span {
+      position: absolute;
+      top: 14px;
+      left: 4px;
+      width: 615px;
+      height: 38px;
+      background-color: #fff;
+      transform: translate3d(0,0,0);
+      opacity: 0;
+      z-index: -2;
+      animation-name: titleBg;
+      animation-duration: 250ms;
+      animation-iteration-count: 2;
+      animation-timing-function: random($limit: 2);
+    }
+    @keyframes title {
+      0% {
+        color: #363c4f;
+      }
+      50% {
+        color: #363c4f
+      }
+      100% {
+        color: #6ddba9;
+      }
+    }
+    @keyframes titleBg {
+      0% {
+        opacity: 0;
+        // transform: translate3d(3px, 1px, 0px);
+      }
+      2% {
+        opacity: 0.3;
+        // transform: translate3d(0px, 0px, 0px);
+      }
+      6% {
+        opacity: 0.8;
+        // transform: translate3d(10px, 10px, 0px);
+      }
+      12% {
+        opacity: 0.3;
+      }
+      25% {
+
+      }
+      37% {
+
+      }
+      48% {
+
+      }
+      60% {
+
+      }
+      100% {
+
+      }
+      
     }
   }
 }

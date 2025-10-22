@@ -52,7 +52,8 @@
         controls.zoomSpeed = 0.8;
         controls.panSpeed = 0.5;
         controls.enableRotate = false;
-        controls.screenSpacePanning = true;
+        controls.enablePan = false;
+        controls.screenSpacePanning = false;
         controls.minDistance = 2;
         controls.maxDistance = 20;
         
@@ -60,7 +61,7 @@
         const ambientLight = new THREE.AmbientLight(0x404080, 0.4);
         scene.add(ambientLight);
         
-        const mainLight = new THREE.DirectionalLight(0xffffff, 1.0);
+        const mainLight = new THREE.DirectionalLight(0xffffff, 2.0);
         mainLight.position.set(10, 10, 10);
         scene.add(mainLight);
         
@@ -69,14 +70,14 @@
         scene.add(fillLight);
         
         // Perfectly organized dots - precise measurements
-        const dotWidth = 0.08;
-        const dotHeight = 0.08;
+        const dotWidth = 0.04;
+        const dotHeight = 0.04;
         const dotDepth = 0.02;
-        const margin = 0.12; // Consistent margin on all sides
+        const margin = 0.028; // Consistent margin on all sides
         
         // Create a perfectly aligned grid
-        const cols = 12;
-        const rows = 8;
+        const cols = 24;
+        const rows = 24;
         const dotCount = cols * rows;
         
         // Calculate total grid dimensions
@@ -133,8 +134,8 @@
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
             
-            targetRotation.x = mouse.y * Math.PI * 0.2; // Reduced rotation range
-            targetRotation.y = mouse.x * Math.PI * 0.4;
+            targetRotation.x = mouse.y * Math.PI * 0.04;
+            targetRotation.y = mouse.x * Math.PI * 0.08;
             
             isMouseMoving = true;
             
@@ -164,10 +165,10 @@
                 currentRotation.y = THREE.MathUtils.lerp(currentRotation.y, targetRotation.y, 0.08);
             } else {
                 // Very slow auto-rotation to maintain organization visibility
-                currentRotation.y += 0.001;
+                // currentRotation.y += 0.001;
             }
             
-            const radius = 5;
+            const radius = 3;
             camera.position.x = radius * Math.sin(currentRotation.y) * Math.cos(currentRotation.x);
             camera.position.y = radius * Math.sin(currentRotation.x);
             camera.position.z = radius * Math.cos(currentRotation.y) * Math.cos(currentRotation.x);

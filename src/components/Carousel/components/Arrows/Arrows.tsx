@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-import type { EmblaCarouselType } from 'embla-carousel';
+import type { EmblaCarouselType } from "embla-carousel";
 
-import ArrowIcon from '@/icons/arrow.svg?react';
+import ArrowIcon from "@/icons/arrow.svg?react";
 
 type UsePrevNextButtonsType = {
   prevBtnDisabled: boolean;
@@ -48,11 +48,8 @@ export const usePrevNextButtons = (
 };
 
 export const PrevButton = () => {
-
   return (
-    <button
-      type="button"
-    >
+    <button type="button">
       <ArrowIcon />
     </button>
   );
@@ -60,10 +57,8 @@ export const PrevButton = () => {
 
 export const NextButton = () => {
   return (
-    <button
-      type="button"
-    >
-      
+    <button type="button">
+      <ArrowIcon />
     </button>
   );
 };

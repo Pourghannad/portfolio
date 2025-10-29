@@ -19,3 +19,18 @@
 .buttons {
   position: absolute;
 }
+.dots {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  .dot {
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-radius: 0px;
+    &.active {
+      background-color: #fff;
+    }
+  }
+}

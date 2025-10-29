@@ -8,6 +8,7 @@ import {
   usePrevNextButtons,
 } from "./components/Arrows/Arrows";
 import { DotButton, useDotButton } from "./components/Dots/Dots";
+import clsx from "clsx";
 
 export function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ axis: "y" });
@@ -34,17 +35,17 @@ export function Carousel() {
       <div className={style["buttons"]}>
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={"embla__dot".concat(
-                index === selectedIndex ? " embla__dot--selected" : ""
-              )}
-            />
-          ))}
-        </div>
+      </div>
+      <div className={style["dots"]}>
+        {scrollSnaps.map((_, index) => (
+          <DotButton
+            key={index}
+            onClick={() => onDotButtonClick(index)}
+            className={clsx(style["dot"], {
+              [style["active"]]: index === selectedIndex,
+            })}
+          />
+        ))}
       </div>
     </div>
   );

@@ -2,9 +2,20 @@ import useEmblaCarousel from "embla-carousel-react";
 import Card from "../Card/Card";
 import style from "./carousel.module.scss";
 import { portfolio } from "../../portfolio";
+import {
+  NextButton,
+  PrevButton,
+  usePrevNextButtons,
+} from "./components/Arrows/Arrows";
 
 export function Carousel() {
-  const [emblaRef] = useEmblaCarousel({ axis: "y" });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ axis: "y" });
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi!);
 
   return (
     <div className={style["embla"]} ref={emblaRef}>
@@ -16,6 +27,10 @@ export function Carousel() {
             </div>
           );
         })}
+      </div>
+      <div className={style["buttons"]}>
+        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
     </div>
   );

@@ -548,7 +548,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    images: ["./img/food-center.jpg"],
+    images: ["./img/food-center.png"],
   },
   {
     name: "Cretively",

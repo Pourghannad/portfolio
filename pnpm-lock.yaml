@@ -48,6 +48,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^5.0.4
         version: 5.0.4(vite@7.1.9(@types/node@24.7.2)(sass@1.93.2))
+      embla-carousel:
+        specifier: ^8.6.0
+        version: 8.6.0
       eslint:
         specifier: ^9.36.0
         version: 9.37.0

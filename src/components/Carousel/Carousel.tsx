@@ -21,6 +21,8 @@ export function Carousel() {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi!);
 
+  
+
   return (
     <div className={style["embla"]} ref={emblaRef}>
       <div className={style["container"]}>

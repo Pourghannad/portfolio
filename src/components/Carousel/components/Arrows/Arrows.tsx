@@ -18,7 +18,6 @@ export const usePrevNextButtons = (
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
   const onPrevButtonClick = useCallback(() => {
-    console.log("asd", emblaApi);
     if (!emblaApi) return;
     emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -27,6 +26,25 @@ export const usePrevNextButtons = (
     if (!emblaApi) return;
     emblaApi.scrollNext();
   }, [emblaApi]);
+
+  const onKeyDown = useCallback(
+    (event: KeyboardEvent) => {
+      if (!emblaApi) return;
+      if (event.key === "ArrowDown") {
+        emblaApi.scrollNext();
+      } else if (event.key === "ArrowUp") {
+        emblaApi.scrollPrev();
+      }
+    },
+    [emblaApi]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [emblaApi, onKeyDown]);
 
   const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setPrevBtnDisabled(!emblaApi.canScrollPrev());

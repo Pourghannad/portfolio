@@ -47,7 +47,7 @@ export const usePrevNextButtons = (
   };
 };
 
-export const PrevButton = () => {
+export const PrevButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = () => {
   return (
     <button type="button">
       <ArrowIcon />
@@ -55,9 +55,9 @@ export const PrevButton = () => {
   );
 };
 
-export const NextButton = () => {
+export const NextButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = () => {
   return (
-    <button type="button">
+    <button style={{transform: 'rotate(180deg)'}} type="button">
       <ArrowIcon />
     </button>
   );

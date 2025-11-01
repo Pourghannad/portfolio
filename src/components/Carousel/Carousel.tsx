@@ -32,10 +32,10 @@ export function Carousel() {
           );
         })}
       </div>
-      <div className={style["buttons"]}>
+      {/* <div className={style["buttons"]}>
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-      </div>
+      </div> */}
       <div className={style["dots"]}>
         {scrollSnaps.map((_, index) => (
           <DotButton

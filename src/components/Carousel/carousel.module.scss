@@ -23,12 +23,19 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 0;
+  top: 5px;
+  left: 2px;
+  height: 405px;
+  flex-wrap: wrap-reverse;
   .dot {
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
     border: 0;
+    margin-bottom: 5px;
+    margin-right: 5px;
     border-radius: 0px;
+    background-color: #474c5d;
+    padding: 0;
     &.active {
       background-color: #fff;
     }

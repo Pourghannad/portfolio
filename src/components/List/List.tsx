@@ -20,11 +20,11 @@ export default function List() {
         <canvas
           ref={canvasRef}
           id="dopdots"
-          width="408px"
-          height="408px"
-          data-margin="12"
+          width="405px"
+          height="405px"
+          data-margin="10"
           data-type="grid"
-          data-elementsize="6"
+          data-elementsize="5"
           data-color="#ffffff12"
           data-elementrect="true"
           data-secondrect="true"

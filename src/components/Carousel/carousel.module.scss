@@ -19,10 +19,21 @@
 .buttons {
   position: absolute;
   z-index: 1;
-  bottom: 0;
-  right: 0;
+  bottom: 8px;
+  right: 41px;
   button {
     cursor: pointer;
+    border: 0;
+    background: #474c5d;
+    padding: 4px 6px;
+    svg {
+      opacity: 0.8;
+    }
+    &:disabled {
+      svg {
+        opacity: 0.3;
+      }
+    }
   }
 }
 .dots {

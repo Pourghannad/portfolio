@@ -1,0 +1,14 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        font-family: 'Courier New', Courier, monospace;
+        margin-right: 6px;
+    }
+}

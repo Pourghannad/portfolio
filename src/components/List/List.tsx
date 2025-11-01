@@ -28,7 +28,7 @@ export default function List() {
           data-color="#ffffff12"
           data-elementrect="true"
           data-secondrect="true"
-          data-secondColor="#0c130b"
+          data-secondcolor="#0c130b"
         ></canvas>
       </div>
       <Carousel />

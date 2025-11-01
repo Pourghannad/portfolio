@@ -18,6 +18,7 @@ export const usePrevNextButtons = (
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
   const onPrevButtonClick = useCallback(() => {
+    console.log("asd", emblaApi);
     if (!emblaApi) return;
     emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -47,17 +48,27 @@ export const usePrevNextButtons = (
   };
 };
 
-export const PrevButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = () => {
+export const PrevButton: React.FC<
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+> = (props) => {
+  const { ...restProps } = props;
   return (
-    <button type="button">
+    <button type="button" {...restProps}>
       <ArrowIcon />
     </button>
   );
 };
 
-export const NextButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = () => {
+export const NextButton: React.FC<
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+> = (props) => {
+  const { ...restProps } = props;
   return (
-    <button style={{transform: 'rotate(180deg)'}} type="button">
+    <button
+      style={{ transform: "rotate(180deg)" }}
+      type="button"
+      {...restProps}
+    >
       <ArrowIcon />
     </button>
   );

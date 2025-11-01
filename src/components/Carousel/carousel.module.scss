@@ -18,24 +18,29 @@
 }
 .buttons {
   position: absolute;
+  z-index: 1;
+  button {
+    cursor: pointer;
+  }
 }
 .dots {
   position: absolute;
   display: flex;
   flex-direction: column;
   top: 5px;
-  left: 2px;
+  left: -32px;
   height: 405px;
   flex-wrap: wrap-reverse;
   .dot {
-    width: 5px;
-    height: 5px;
+    width: 11px;
+    height: 11px;
     border: 0;
     margin-bottom: 5px;
     margin-right: 5px;
     border-radius: 0px;
     background-color: #474c5d;
     padding: 0;
+    cursor: pointer;
     &.active {
       background-color: #fff;
     }

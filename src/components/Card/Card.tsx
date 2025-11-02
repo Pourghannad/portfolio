@@ -12,8 +12,11 @@ export default function Card(props: ICardProps) {
         </a>
       )}
       <div>{data.type}</div>
-      <div>{data.development}</div>
-      <div>
+      {data.development ?? <div>{data.development}</div>}
+      {data.design ?? <div>{data.design}</div>}
+      <span>
+        {data.createdAt}
+      </span>
         {data?.memberOfTeam ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +31,6 @@ export default function Card(props: ICardProps) {
         ) : (
           null
         )}
-      </div>
       {data.images && data.images.length > 0 && (
         <div
           className={style["cover"]}

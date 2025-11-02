@@ -36,6 +36,10 @@
     }
   }
 }
+.filters {
+  position: absolute;
+  z-index: 1;
+}
 .dots {
   position: absolute;
   display: flex;

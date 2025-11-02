@@ -9,9 +9,11 @@ import {
 } from "./components/Arrows/Arrows";
 import { DotButton, useDotButton } from "./components/Dots/Dots";
 import clsx from "clsx";
+import { useState } from "react";
 
 export function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ axis: "y" });
+  const [items, setItems] = useState(portfolio);
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
   const {
@@ -21,12 +23,20 @@ export function Carousel() {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi!);
 
+  const onFilterClick = (type: string) => {
+    if (type) {
+      setItems(portfolio.filter((item) => item.type === type));
+    } else {
+      setItems(portfolio)
+    }
+  }
+
   
 
   return (
     <div className={style["embla"]} ref={emblaRef}>
       <div className={style["container"]}>
-        {portfolio.map((item, index) => {
+        {items.map((item, index) => {
           return (
             <div key={index} className={style["slide"]}>
               <Card data={item} />
@@ -37,6 +47,11 @@ export function Carousel() {
       <div className={style["buttons"]}>
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      </div>
+      <div className={style["filters"]}>
+        <button onClick={() => onFilterClick('')}>all</button>
+        <button onClick={() => onFilterClick('website')}>website</button>
+        <button onClick={() => onFilterClick('pwa')}>pwa</button>
       </div>
       <div className={style["dots"]}>
         {scrollSnaps.map((_, index) => (

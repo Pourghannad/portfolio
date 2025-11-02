@@ -49,9 +49,11 @@ export function Carousel() {
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
       <div className={style["filters"]}>
-        <button onClick={() => onFilterClick('')}>all</button>
-        <button onClick={() => onFilterClick('website')}>website</button>
-        <button onClick={() => onFilterClick('pwa')}>pwa</button>
+        <button onClick={() => onFilterClick('')}>All</button>
+        <button onClick={() => onFilterClick('website')}>Website</button>
+        <button onClick={() => onFilterClick('pwa')}>Pwa</button>
+        <button onClick={() => onFilterClick('gif')}>Gif</button>
+        <button onClick={() => onFilterClick('gif')}>Open source</button>
       </div>
       <div className={style["dots"]}>
         {scrollSnaps.map((_, index) => (

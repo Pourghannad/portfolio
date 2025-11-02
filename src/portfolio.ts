@@ -949,7 +949,7 @@ export const portfolio = [
   {
     name: "MMMusic",
     type: "wordpress-template",
-    design: "-",
+    design: "",
     development: "Pourghannad",
     platform: ["WordPress"],
     description: "",

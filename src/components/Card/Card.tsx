@@ -14,7 +14,7 @@ export default function Card(props: ICardProps) {
       <div>{data.type}</div>
       {data.development ?? <div>{data.development}</div>}
       {data.design ?? <div>{data.design}</div>}
-      <span>
+      <span className={style["createdat"]}>
         {data.createdAt}
       </span>
         {data?.memberOfTeam ? (

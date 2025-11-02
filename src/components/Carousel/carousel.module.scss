@@ -39,15 +39,25 @@
 .filters {
   position: absolute;
   z-index: 1;
-  bottom: 0;
-  left: 150px;
+  bottom: 8px;
+  left: 40px;
   button {
     border: 0;
     background-color: #363c4f;
     font-family: "League Gothic";
     letter-spacing: 1px;
-    font-size: 15px;
+    font-size: 13px;
+    margin-right: 12px;
+    width: 48px;
+    height: 20px;
+    color: #ffffff83;
     cursor: pointer;
+    &:last-of-type {
+      width: 70px;
+    }
+    &.active {
+      color: #fff;
+    }
   }
 }
 .dots {
@@ -62,7 +72,7 @@
     width: 9px;
     height: 9px;
     border: 0;
-    margin-bottom: 5px;
+    margin-bottom: 5.325px;
     margin-right: 5px;
     border-radius: 0px;
     background-color: #474c5d;

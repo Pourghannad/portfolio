@@ -13,7 +13,7 @@ import { useState } from "react";
 
 export function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ axis: "y" });
-  const [items, setItems] = useState(portfolio);
+  const [items, setItems] = useState({ data: portfolio, title: "all" });
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
   const {
@@ -25,18 +25,19 @@ export function Carousel() {
 
   const onFilterClick = (type: string) => {
     if (type) {
-      setItems(portfolio.filter((item) => item.type === type));
+      setItems({
+        data: portfolio.filter((item) => item.type === type),
+        title: type,
+      });
     } else {
-      setItems(portfolio)
+      setItems({ data: portfolio, title: "all" });
     }
-  }
-
-  
+  };
 
   return (
     <div className={style["embla"]} ref={emblaRef}>
       <div className={style["container"]}>
-        {items.map((item, index) => {
+        {items.data.map((item, index) => {
           return (
             <div key={index} className={style["slide"]}>
               <Card data={item} />
@@ -49,11 +50,36 @@ export function Carousel() {
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
       <div className={style["filters"]}>
-        <button onClick={() => onFilterClick('')}>All</button>
-        <button onClick={() => onFilterClick('website')}>Website</button>
-        <button onClick={() => onFilterClick('pwa')}>Pwa</button>
-        <button onClick={() => onFilterClick('gif')}>Gif</button>
-        <button onClick={() => onFilterClick('gif')}>Open source</button>
+        <button
+          className={clsx({ [style["active"]]: items.title === "all" })}
+          onClick={() => onFilterClick("")}
+        >
+          All
+        </button>
+        <button
+          className={clsx({ [style["active"]]: items.title === "website" })}
+          onClick={() => onFilterClick("website")}
+        >
+          Website
+        </button>
+        <button
+          className={clsx({ [style["active"]]: items.title === "pwa" })}
+          onClick={() => onFilterClick("pwa")}
+        >
+          Pwa
+        </button>
+        <button
+          className={clsx({ [style["active"]]: items.title === "gif" })}
+          onClick={() => onFilterClick("gif")}
+        >
+          Gif
+        </button>
+        <button
+          className={clsx({ [style["active"]]: items.title === "open-source" })}
+          onClick={() => onFilterClick("open-source")}
+        >
+          Open source
+        </button>
       </div>
       <div className={style["dots"]}>
         {scrollSnaps.map((_, index) => (

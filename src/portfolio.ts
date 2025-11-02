@@ -2,7 +2,7 @@ export const portfolio = [
   {
     name: "Hamrahtel Incredibles Landing",
     type: "website",
-    design: "Hamrahtel Design team",
+    design: "Hamrahtel team",
     development: "Pourghannad",
     technology: ["react", "typescript", "tailwind"],
     description: "",
@@ -13,7 +13,7 @@ export const portfolio = [
   {
     name: "Hamrahtel App Landing",
     type: "website",
-    design: "Hamrahtel Design team",
+    design: "Hamrahtel team",
     development: "Pourghannad",
     technology: ["react", "typescript", "tailwind"],
     description: "",
@@ -24,7 +24,7 @@ export const portfolio = [
   {
     name: "gsm.ir backoffice",
     type: "website",
-    design: "Hamrahtel Design team",
+    design: "Hamrahtel team",
     technology: [
       "react",
       "typescript",
@@ -47,7 +47,7 @@ export const portfolio = [
   {
     name: "Hamrahtel warehouse",
     type: "website",
-    design: "Hamrahtel Design team",
+    design: "Hamrahtel team",
     technology: [
       "react",
       "typescript",
@@ -70,7 +70,7 @@ export const portfolio = [
   {
     name: "Hamrahtel backoffice",
     type: "website",
-    design: "Hamrahtel Design team",
+    design: "Hamrahtel team",
     technology: [
       "react",
       "typescript",
@@ -94,7 +94,7 @@ export const portfolio = [
   {
     name: "Hamrahtel pwa",
     type: "pwa",
-    design: "Hamrahtel Design team",
+    design: "Hamrahtel team",
     technology: [
       "react",
       "typescript",
@@ -122,7 +122,7 @@ export const portfolio = [
   {
     name: "youCube twa",
     type: "pwa",
-    design: "youCube Design team",
+    design: "youCube team",
     technology: [
       "react",
       "typescript",
@@ -163,7 +163,7 @@ export const portfolio = [
   {
     name: "karaz care",
     type: "website",
-    design: "karaz design team",
+    design: "karaz team",
     technology: ["nextjs", "material-ui", "jest", "styled-components"],
     description: "",
     createdAt: "2024",
@@ -184,7 +184,7 @@ export const portfolio = [
   {
     name: "rapidpacecrm panel",
     type: "website",
-    design: "roundtableapps design team",
+    design: "RTA team",
     technology: ["react", "i18n", "micro-frontend", "redux-saga", "ant-design"],
     description: "",
     memberOfTeam: true,
@@ -195,7 +195,7 @@ export const portfolio = [
   {
     name: "rapidpacecrm",
     type: "website",
-    design: "roundtableapps design team",
+    design: "RTA team",
     technology: ["webflow"],
     description: "",
     memberOfTeam: true,
@@ -206,7 +206,7 @@ export const portfolio = [
   {
     name: "Carriot backoffice",
     type: "website",
-    design: "Carriot Design Team",
+    design: "Carriot Team",
     technology: ["react", "typescript", "nextjs", "material ui", "gRPC"],
     description: "",
     memberOfTeam: true,
@@ -228,7 +228,7 @@ export const portfolio = [
   {
     name: "Sabaidea SSO V2",
     type: "website",
-    design: "Sabaidea Design Team",
+    design: "Sabaidea Team",
     technology: ["react", "typescript", "i18n"],
     description: "",
     memberOfTeam: true,
@@ -250,7 +250,7 @@ export const portfolio = [
   {
     name: "Aparat2",
     type: "website",
-    design: "Sabaidea Design Team",
+    design: "Sabaidea Team",
     technology: [
       "react",
       "typescript",
@@ -307,9 +307,9 @@ export const portfolio = [
     images: ["./img/hubber.png"],
   },
   {
-    name: "Address pwa",
+    name: "Address Pwa",
     type: "pwa",
-    design: "address design team",
+    design: "Address team",
     technology: [
       "react",
       "typescript",
@@ -347,7 +347,7 @@ export const portfolio = [
   {
     name: "Address v2",
     type: "website",
-    design: "address design team",
+    design: "address team",
     technology: [
       "react",
       "typescript",
@@ -393,7 +393,7 @@ export const portfolio = [
   {
     name: "Address v1",
     type: "website",
-    design: "address design team",
+    design: "address team",
     technology: ["react", "typescript", "webpack", "ant-design"],
     memberOfTeam: true,
     description: "",
@@ -449,7 +449,7 @@ export const portfolio = [
   },
   {
     name: "DCMON 2",
-    type: "web-application",
+    type: "pwa",
     technology: ["Angular4", "metronic-theme", "TypeScript", "webpack"],
     design: "baninab team",
     memberOfTeam: true,
@@ -469,7 +469,7 @@ export const portfolio = [
   },
   {
     name: "Baniguard 2",
-    type: "web-application",
+    type: "website",
     technology: ["scss", "Angular 4", "Node.js", "webpack", "TypeScript"],
     design: "",
     memberOfTeam: true,
@@ -482,7 +482,7 @@ export const portfolio = [
   },
   {
     name: "DCMON 1",
-    type: "web-application",
+    type: "website",
     technology: ["jQuery", "gulp", "mustache.js"],
     design: "Pourghannad",
     memberOfTeam: true,
@@ -495,7 +495,7 @@ export const portfolio = [
   },
   {
     name: "Baniguard 1",
-    type: "web-application",
+    type: "website",
     technology: ["scss", "AngularJS", "Node.js"],
     design: "",
     memberOfTeam: true,
@@ -542,7 +542,7 @@ export const portfolio = [
   {
     name: "food-center",
     type: "website",
-    design: "Cretively Design Team",
+    design: "Cretively Team",
     development: "Pourghannad",
     platform: ["Woocommerce"],
     description: "",
@@ -553,7 +553,7 @@ export const portfolio = [
   {
     name: "Cretively",
     type: "website",
-    design: "Cretively Design Team",
+    design: "Cretively Team",
     development: "Pourghannad",
     platform: ["Woocommerce"],
     description: "",
@@ -582,7 +582,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: ["./img/oudlajan.png"],
+    images: ["./img/oudlajan.jpg"],
   },
   {
     name: "mehrnegar",

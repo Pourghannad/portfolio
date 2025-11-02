@@ -9,12 +9,49 @@
     color: #fff;
     font-size: 21px;
   }
-  .createdat {
+  .badges {
     position: absolute;
-    bottom: 0;
-    left: 12px;
-    background: #363c4f;
-    padding: 4px;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    width: 56px;
+    height: 27px;
+    color: #ffffff9e;
+    background-color: #363c4f;
+    text-transform: uppercase;
+    right: 0px;
+    line-height: 26px;
+    transition-property: color;
+    transition-duration: 150ms;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .member {
+    background-color: #ffffff22;
+    height: 27px;
+    display: flex;
+    line-height: 1px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 4px;
+    text-transform: uppercase;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+  }
+  .createdat {
+    width: 56px;
+    height: 27px;
+    bottom: 10px;
+    line-height: 26px;
+    left: 0px;
+    background-color: #363c4f;
   }
   .cover {
     position: absolute;

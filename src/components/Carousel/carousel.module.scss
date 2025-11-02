@@ -83,8 +83,34 @@
     background-color: #474c5d;
     padding: 0;
     cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 150ms;
     &.active {
       background-color: #ffffff77;
+      animation-name: activeDot;
+      animation-iteration-count: 1;
+      transform: translate3d(0px,0px,0px);
+      animation-duration: 100ms;
+    }
+  }
+  @keyframes activeDot {
+    0% {
+      transform: translate3d(0px, 0px, 0px);
+    }
+    20% {
+      transform: translate3d(3px, 20px, 0px);
+    }
+    40% {
+      transform: translate3d(-3px, -20px, 0px);
+    }
+    60% {
+      transform: translate3d(3px, 20px, 0px);
+    }
+    80% {
+      transform: translate3d(-3px, -20px, 0px);
+    }
+    100% {
+      transform: translate3d(3px, 20px, 0px);
     }
   }
 }

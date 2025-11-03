@@ -17,10 +17,13 @@ export default function Card(props: ICardProps) {
             part of a team
           </div>
         )}
-        {data.design ?? (
+        {data.design && (
           <div className={style["design"]}>
             <PenIcon />
             {data.design}
+            <span>
+              Designed by: {data.design}
+            </span>
           </div>
         )}
         {data.link && (

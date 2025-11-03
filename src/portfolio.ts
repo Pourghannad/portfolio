@@ -151,7 +151,7 @@ export const portfolio = [
   },
   {
     name: "panj.monster",
-    type: "logo",
+    type: "website",
     design: "Pourghannad",
     development: "Pourghannad",
     platform: ["html", "css"],
@@ -267,7 +267,7 @@ export const portfolio = [
   },
   {
     name: "4896 animated logo",
-    type: "logo",
+    type: "website",
     design: "Pourghannad",
     development: "Pourghannad",
     platform: ["html", "css"],

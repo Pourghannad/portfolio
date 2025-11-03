@@ -9,6 +9,7 @@ export default function Card(props: ICardProps) {
   return (
     <div className={style["card"]}>
       <h4>{data.name}</h4>
+      <div className=""></div>
       <div className={style["badges"]}>
         <span className={style["createdat"]}>{data.createdAt}</span>
         {data?.memberOfTeam && (
@@ -33,7 +34,6 @@ export default function Card(props: ICardProps) {
         )}
       </div>
       <div>{data.type}</div>
-      {data.development ?? <div>{data.development}</div>}
       {data.images && data.images.length > 0 && (
         <div
           className={style["cover"]}

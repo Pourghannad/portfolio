@@ -5,11 +5,13 @@ import TeamIcon from "@/icons/team.svg?react";
 import PenIcon from "@/icons/pen.svg?react";
 
 export default function Card(props: ICardProps) {
-  const { data } = props;
+  const { data, title } = props;
   return (
     <div className={style["card"]}>
       <h4>{data.name}</h4>
-      <div className=""></div>
+      {title === "all" && <span className={style["type"]}>{data.type}</span>}
+      <div className={style["description"]}>
+      </div>
       <div className={style["badges"]}>
         <span className={style["createdat"]}>{data.createdAt}</span>
         {data?.memberOfTeam && (
@@ -23,7 +25,7 @@ export default function Card(props: ICardProps) {
             <PenIcon />
             {data.design}
             <span>
-              Designed by: {data.design}
+              Designed by:
             </span>
           </div>
         )}
@@ -33,7 +35,6 @@ export default function Card(props: ICardProps) {
           </a>
         )}
       </div>
-      <div>{data.type}</div>
       {data.images && data.images.length > 0 && (
         <div
           className={style["cover"]}

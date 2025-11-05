@@ -422,7 +422,7 @@ export const portfolio = [
     description: "",
     createdAt: "2018",
     link: "",
-    images: [],
+    images: ["./img/gtick.png"],
   },
   {
     name: "dopdots",

@@ -40,7 +40,7 @@ export function Carousel() {
         {items.data.map((item, index) => {
           return (
             <div key={index} className={style["slide"]}>
-              <Card data={item} />
+              <Card title={items.title} data={item} />
             </div>
           );
         })}

@@ -8,7 +8,7 @@ export default function Card(props: ICardProps) {
   const { data, title } = props;
   return (
     <div className={style["card"]}>
-      <h4>{data.name}</h4>
+      <h4>{data.name} {data.description && <span>{data.description}</span>} </h4>
       {title === "all" && <span className={style["type"]}>{data.type}</span>}
       <div className={style["description"]}>
       </div>

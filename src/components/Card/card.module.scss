@@ -11,6 +11,29 @@
     margin-top: 48px;
     cursor: default;
     letter-spacing: 0.5px;
+    position: relative;
+    span {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      white-space: pre;
+      z-index: 1;
+      font-size: 15px;
+      background-color: rgba(255, 255, 255, 0.2);
+      top: -22px;
+      transition-property: opacity, visibility;
+      transition-duration: 170ms;
+      left: 50%;
+      transform: translate3d(-50%, 0px, 10px);
+      padding: 1px 6px;
+      text-transform: uppercase;
+    }
+    &:hover {
+      span {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
   .type {
     position: absolute;
@@ -130,5 +153,4 @@
       opacity: 0.45;
     }
   }
-
 }

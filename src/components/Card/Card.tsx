@@ -3,6 +3,7 @@ import type { ICardProps } from "./types";
 
 import TeamIcon from "@/icons/team.svg?react";
 import PenIcon from "@/icons/pen.svg?react";
+import TechIcon from "@/icons/tech.svg?react";
 
 export default function Card(props: ICardProps) {
   const { data, title } = props;
@@ -11,6 +12,13 @@ export default function Card(props: ICardProps) {
       <h4>{data.name} {data.description && <span>{data.description}</span>} </h4>
       {title === "all" && <span className={style["type"]}>{data.type}</span>}
       <div className={style["description"]}>
+        {data.technology && data.technology.length > 0 && 
+          <div className={style["tech"]}>
+            <TechIcon />
+            {data.technology.join(', ')}
+          </div>
+        
+        }
       </div>
       <div className={style["badges"]}>
         <span className={style["createdat"]}>{data.createdAt}</span>

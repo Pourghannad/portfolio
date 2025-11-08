@@ -28,7 +28,6 @@ export const portfolio = [
     technology: [
       "react",
       "typescript",
-      "vite",
       "react-query",
       "material-ui",
       "react-hook-form",
@@ -51,7 +50,6 @@ export const portfolio = [
     technology: [
       "react",
       "typescript",
-      "vite",
       "react-query",
       "jotai",
       "material-ui",
@@ -74,7 +72,6 @@ export const portfolio = [
     technology: [
       "react",
       "typescript",
-      "vite",
       "react-query",
       "material-ui",
       "react-hook-form",
@@ -126,7 +123,6 @@ export const portfolio = [
     technology: [
       "react",
       "typescript",
-      "vite",
       "react-query",
       "jotai",
       "scss-modules",

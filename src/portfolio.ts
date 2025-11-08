@@ -823,7 +823,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/tarahanweb-2.png", "./img/tarahanweb-1.png"],
   },
   {
     name: "learnspot",
@@ -834,7 +834,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/learnspot.gif"],
   },
   {
     name: "uploadbit",

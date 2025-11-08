@@ -42,7 +42,7 @@ export const portfolio = [
     createdAt: "2025",
     memberOfTeam: true,
     link: "https://gbo.gsm.ir/",
-    images: [],
+    images: ["./img/gbo.png"],
   },
   {
     name: "Hamrahtel warehouse",
@@ -445,7 +445,7 @@ export const portfolio = [
     description: "",
     createdAt: "2017",
     link: "https://pourghannad.github.io/BaninaB-website/#/fa",
-    images: [],
+    images: ["./img/baninab.png"],
   },
   {
     name: "DCMON 2",
@@ -540,17 +540,6 @@ export const portfolio = [
     images: ["./img/unknown-v2.jpg", "./img/unknown-v2-1.png"],
   },
   {
-    name: "sama",
-    type: "website",
-    design: "Pourghannad",
-    development: "Pourghannad",
-    platform: [],
-    description: "",
-    createdAt: "2016",
-    link: "",
-    images: ["./img/sama.jpg"],
-  },
-  {
     name: "food-center",
     type: "website",
     design: "Cretively Team",
@@ -600,6 +589,17 @@ export const portfolio = [
     createdAt: "2016",
     link: "",
     images: ["./img/tolidat-melli.png"],
+  },
+  {
+    name: "sama",
+    type: "website",
+    design: "Pourghannad",
+    development: "Pourghannad",
+    platform: [],
+    description: "",
+    createdAt: "2016",
+    link: "",
+    images: ["./img/sama.jpg"],
   },
   {
     name: "oudlajan",
@@ -841,6 +841,17 @@ export const portfolio = [
     createdAt: "2015",
     link: "",
     images: ["./img/tarahanweb-2.png", "./img/tarahanweb-1.png"],
+  },
+  {
+    name: "20script upload center",
+    type: "website",
+    design: "ivahid",
+    development: "Pourghannad",
+    platform: ["kleeja"],
+    description: "",
+    createdAt: "2015",
+    link: "",
+    images: ["./img/20script-upload.png"],
   },
   {
     name: "learnspot",
@@ -1207,7 +1218,7 @@ export const portfolio = [
     link: "",
     images: ["./img/4color.png"],
   },
-    {
+  {
     name: "Orpf landing",
     type: "website",
     design: "Erfan bagheri",

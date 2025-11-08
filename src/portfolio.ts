@@ -647,7 +647,7 @@ export const portfolio = [
     description: "free mihalism template",
     createdAt: "2016",
     link: "",
-    images: [],
+    images: ["./img/enviar-1.png", "./img/enviar-2.png"],
   },
   {
     name: "design team 90theme",

@@ -724,7 +724,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/up-90theme-1.png"],
   },
   {
     name: "8data",
@@ -955,7 +955,7 @@ export const portfolio = [
     description: "free wordpress template",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/M2Music-1.jpg", "./img/M2Music-2.png"],
   },
   {
     name: "20script froum",
@@ -973,11 +973,11 @@ export const portfolio = [
     type: "website",
     design: "Pourghannad",
     development: "Pourghannad",
-    platform: ["html"],
+    platform: ["wordpress"],
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/loxit-1.png"],
   },
   {
     name: "80200",
@@ -1054,7 +1054,7 @@ export const portfolio = [
     description: "",
     createdAt: "2014",
     link: "",
-    images: [],
+    images: ["./img/90theme-v1.2-2.png", "./img/90theme-v1.2-1.png"],
   },
   {
     name: "90theme-version-1",

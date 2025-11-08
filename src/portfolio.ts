@@ -867,7 +867,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/khatblog.png"],
   },
   {
     name: "modemardan",
@@ -878,7 +878,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/modemardan.gif"],
   },
   {
     name: "iran news",
@@ -911,7 +911,7 @@ export const portfolio = [
     description: "free wordpress template",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/unkown-v1-1.png"],
   },
   {
     name: "avawebgostar",
@@ -922,7 +922,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/ava-1.gif"],
   },
   {
     name: "corederoma",
@@ -944,7 +944,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/iranvpn.jpg"],
   },
   {
     name: "MMMusic",

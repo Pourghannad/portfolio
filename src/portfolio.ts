@@ -658,7 +658,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    images: [],
+    images: ["./img/design-90theme-1-1.png", "./img/design-90theme-1-2.png"],
   },
   {
     name: "tanaz",

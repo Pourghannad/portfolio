@@ -838,14 +838,14 @@ export const portfolio = [
   },
   {
     name: "uploadbit",
-    type: "banner",
+    type: "website",
     design: "Pourghannad",
-    development: "",
-    platform: ["banner"],
+    development: "Pourghannad",
+    platform: ["mihalism"],
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/uploadbit.png"],
   },
   {
     name: "diri",
@@ -856,7 +856,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/diri.gif"],
   },
   {
     name: "khatblog",

@@ -593,7 +593,7 @@ export const portfolio = [
     description: "free wordpress template",
     createdAt: "2016",
     link: "",
-    images: [],
+    images: ["./img/mehrnegar-1.jpg"],
   },
   {
     name: "design team 90theme v2",
@@ -614,7 +614,7 @@ export const portfolio = [
     description: "iranian bank logo with svg and css animation",
     createdAt: "2016",
     link: "https://pourghannad.github.io/iranian-bank-logo/",
-    images: [],
+    images: ["./img/iranian-bank-logo-1.png"],
   },
   {
     name: "bazitak.ir",
@@ -625,10 +625,10 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    images: [],
+    images: ["./img/bazitak.jpg"],
   },
   {
-    name: "90theme v2",
+    name: "90theme V2",
     type: "website",
     design: "Pourghannad",
     development: "Pourghannad",
@@ -636,7 +636,7 @@ export const portfolio = [
     description: "",
     createdAt: "2015",
     link: "",
-    images: [],
+    images: ["./img/90theme-v2-1.png"],
   },
   {
     name: "enviar",

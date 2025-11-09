@@ -4,7 +4,6 @@ export interface IPortfolio {
     design: string;
     createdAt: string;
     development: string;
-    platform?: string[];
     description: string;
     link: string;
     images: string[];

@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import style from "./list.module.scss";
 import dopDots from "@pourghannad/dopdots";
 import { Carousel } from "../Carousel/Carousel";
-import clsx from "clsx";
+import * as clsx from "clsx";
 
 export default function List() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

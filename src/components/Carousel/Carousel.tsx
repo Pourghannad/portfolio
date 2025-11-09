@@ -8,7 +8,7 @@ import {
   usePrevNextButtons,
 } from "./components/Arrows/Arrows";
 import { DotButton, useDotButton } from "./components/Dots/Dots";
-import clsx from "clsx";
+import * as clsx from "clsx";
 import { useState } from "react";
 
 export function Carousel() {

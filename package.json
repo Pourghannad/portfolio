@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://github.com/pourghannad/portfolio",
+  "homepage": "https://pourghannad.github.io/portfolio",
   "dependencies": {
     "@pourghannad/dopdots": "^1.0.4",
     "clsx": "^2.1.1",

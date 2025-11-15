@@ -8,7 +8,6 @@ import {
   usePrevNextButtons,
 } from "./components/Arrows/Arrows";
 import { DotButton, useDotButton } from "./components/Dots/Dots";
-import * as clsx from "clsx";
 import { useState } from "react";
 
 export function Carousel() {
@@ -51,31 +50,31 @@ export function Carousel() {
       </div>
       <div className={style["filters"]}>
         <button
-          className={clsx({ [style["active"]]: items.title === "all" })}
+          className={items.title === "all" ? style["active"] : ""}
           onClick={() => onFilterClick("")}
         >
           All
         </button>
         <button
-          className={clsx({ [style["active"]]: items.title === "website" })}
+          className={items.title === "website" ? style["active"] : ""}
           onClick={() => onFilterClick("website")}
         >
           Website
         </button>
         <button
-          className={clsx({ [style["active"]]: items.title === "pwa" })}
+          className={items.title === "pwa" ? style["active"] : ""}
           onClick={() => onFilterClick("pwa")}
         >
           Pwa
         </button>
         <button
-          className={clsx({ [style["active"]]: items.title === "gif" })}
+          className={items.title === "gif" ? style["active"] : ""}
           onClick={() => onFilterClick("gif")}
         >
           Gif
         </button>
         <button
-          className={clsx({ [style["active"]]: items.title === "open-source" })}
+          className={items.title === "open-source" ? style["active"] : ""}
           onClick={() => onFilterClick("open-source")}
         >
           Open source
@@ -86,9 +85,9 @@ export function Carousel() {
           <DotButton
             key={index}
             onClick={() => onDotButtonClick(index)}
-            className={clsx(style["dot"], {
-              [style["active"]]: index === selectedIndex,
-            })}
+            className={`${style["dot"]} ${
+              index === selectedIndex ? style["active"] : ""
+            }`}
           />
         ))}
       </div>

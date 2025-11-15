@@ -121,7 +121,7 @@ export const portfolio = [
     description: "",
     createdAt: "2024",
     memberOfTeam: true,
-    link: "https://app.youcube.ai",
+    link: "https://youcube.ai/signin",
     images: ["./img/youcube.png", "./img/youcube2.png"],
   },
   {

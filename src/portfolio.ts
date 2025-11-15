@@ -568,7 +568,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    images: ["./img/tolidat-melli.png"],
+    images: ["./img/tolidat-melli.jpg"],
   },
   {
     name: "sama",

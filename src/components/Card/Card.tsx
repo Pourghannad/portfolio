@@ -4,6 +4,7 @@ import type { ICardProps } from "./types";
 import TeamIcon from "@/icons/team.svg?react";
 import PenIcon from "@/icons/pen.svg?react";
 import TechIcon from "@/icons/tech.svg?react";
+import EyeIcon from "@/icons/eye.svg?react";
 import { useCallback, useState } from "react";
 
 const PLACEHOLDER_SRC = `data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D`;
@@ -20,6 +21,7 @@ export default function Card(props: ICardProps) {
         {data.name} {data.description && <span>{data.description}</span>}{" "}
       </h4>
       {title === "all" && <span className={style["type"]}>{data.type}</span>}
+      {}
       <div className={style["description"]}>
         {data.technology && data.technology.length > 0 && (
           <div className={style["tech"]}>
@@ -44,7 +46,7 @@ export default function Card(props: ICardProps) {
           </div>
         )}
         {data.link && (
-          <a href={data.link} target="_blank">
+          <a className={style.link} href={data.link} target="_blank">
             Demo
           </a>
         )}
@@ -52,13 +54,16 @@ export default function Card(props: ICardProps) {
       {!hasLoaded && <span className={style["image-loading"]} />}
       {<span className={style["image-loading"]} />}
       {data.images && data.images.length > 0 && (
-        <img
-          data-src={data.images[0]}
-          alt={data.name}
-          src={inView ? data.images[0] : PLACEHOLDER_SRC}
-          onLoad={setLoaded}
-          className={style["cover"]}
-        />
+        <>
+          <img
+            data-src={data.images[0]}
+            alt={data.name}
+            src={inView ? data.images[0] : PLACEHOLDER_SRC}
+            onLoad={setLoaded}
+            className={style["cover"]}
+          />
+          <a title={`${data.name} image`} className={style["image-link"]} href={data.images[0]} target="_blank"><EyeIcon /></a>
+        </>
       )}
       {/* {data.images &&
         data.images?.length > 0 &&

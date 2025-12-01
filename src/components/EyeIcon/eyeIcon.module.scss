@@ -1,12 +1,16 @@
 .eye-icon {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   position: relative;
   z-index: 2;
   path {
-    fill: #fff;
+    fill: #ffffff9b;
   }
   .circle-eye {
     transform-origin: center center;
+    fill: #6ddba9;
+    transition-duration: 200ms;
+    transition-property: transform;
+    transition-timing-function:ease-out;
   }
 }

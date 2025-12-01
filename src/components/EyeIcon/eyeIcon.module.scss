@@ -1,0 +1,12 @@
+.eye-icon {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  z-index: 2;
+  path {
+    fill: #fff;
+  }
+  .circle-eye {
+    transform-origin: center center;
+  }
+}

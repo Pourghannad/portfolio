@@ -14,7 +14,7 @@ import { EmblaCarouselType } from "embla-carousel";
 export function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ axis: "y" });
   const [items, setItems] = useState({ data: portfolio, title: "all" });
-    const [slidesInView, setSlidesInView] = useState<number[]>([])
+  const [slidesInView, setSlidesInView] = useState<number[]>([]);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
@@ -25,25 +25,25 @@ export function Carousel() {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi!);
 
-    const updateSlidesInView = useCallback((emblaApi: EmblaCarouselType) => {
+  const updateSlidesInView = useCallback((emblaApi: EmblaCarouselType) => {
     setSlidesInView((slidesInView) => {
       if (slidesInView.length === emblaApi.slideNodes().length) {
-        emblaApi.off('slidesInView', updateSlidesInView)
+        emblaApi.off("slidesInView", updateSlidesInView);
       }
       const inView = emblaApi
         .slidesInView()
-        .filter((index) => !slidesInView.includes(index))
-      return slidesInView.concat(inView)
-    })
-  }, [])
+        .filter((index) => !slidesInView.includes(index));
+      return slidesInView.concat(inView);
+    });
+  }, []);
 
-    useEffect(() => {
-    if (!emblaApi) return
+  useEffect(() => {
+    if (!emblaApi) return;
 
-    updateSlidesInView(emblaApi)
-    emblaApi.on('slidesInView', updateSlidesInView)
-    emblaApi.on('reInit', updateSlidesInView)
-  }, [emblaApi, updateSlidesInView])
+    updateSlidesInView(emblaApi);
+    emblaApi.on("slidesInView", updateSlidesInView);
+    emblaApi.on("reInit", updateSlidesInView);
+  }, [emblaApi, updateSlidesInView]);
 
   const onFilterClick = (type: string) => {
     if (type) {
@@ -58,11 +58,15 @@ export function Carousel() {
 
   return (
     <div className={style["embla"]} ref={emblaRef}>
-      <div className={style["container"]}>
+      <div className={style["container"]} id="container">
         {items.data.map((item, index) => {
           return (
             <div key={index} className={style["slide"]}>
-              <Card title={items.title} data={item} inView={slidesInView.indexOf(index) > -1} />
+              <Card
+                title={items.title}
+                data={item}
+                inView={slidesInView.indexOf(index) > -1}
+              />
             </div>
           );
         })}

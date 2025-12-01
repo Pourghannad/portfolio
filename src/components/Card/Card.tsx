@@ -10,7 +10,7 @@ import EyeIcon from "../EyeIcon/EyeIcon";
 const PLACEHOLDER_SRC = `data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D`;
 
 export default function Card(props: ICardProps) {
-  const { data, title, inView } = props;
+  const { data, title, inView, index } = props;
   const [hasLoaded, setHasLoaded] = useState(false);
   const setLoaded = useCallback(() => {
     if (inView) setHasLoaded(true);
@@ -68,7 +68,7 @@ export default function Card(props: ICardProps) {
             href={data.images[0]}
             target="_blank"
           >
-            <EyeIcon inView={inView} />
+            <EyeIcon inView={index === 0} />
           </a>
         </>
       )}

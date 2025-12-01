@@ -14,9 +14,10 @@ export default function EyeIcon(props: IEyeIcon) {
       const rect = element.getBoundingClientRect();
       const elX = -(rect.left - event.clientX) / 9;
       const elY = -(rect.top - event.clientY) / 9;
+      const radius = 9;
       setOffset({
-        x: elX > 20 ? 20 : elX < -18 ? -18 : elX,
-        y: elY > 20 ? 20 : elY < -16 ? -16 : elY,
+        x: elX > radius ? radius : elX < -radius ? -radius : elX,
+        y: elY > radius ? radius : elY < -radius ? -radius : elY,
       });
     }
   }, 200);

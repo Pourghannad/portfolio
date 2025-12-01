@@ -65,6 +65,7 @@ export function Carousel() {
               <Card
                 title={items.title}
                 data={item}
+                index={index}
                 inView={slidesInView.indexOf(index) > -1}
               />
             </div>

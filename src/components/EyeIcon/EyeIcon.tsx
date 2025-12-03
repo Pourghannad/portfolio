@@ -20,7 +20,7 @@ export default function EyeIcon(props: IEyeIcon) {
         y: elY > radius ? radius : elY < -radius ? -radius : elY,
       });
     }
-  }, 200);
+  }, 50);
 
   useEffect(() => {
     if (inView) {

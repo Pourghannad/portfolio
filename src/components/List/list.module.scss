@@ -1,5 +1,5 @@
 .list-container {
-    width: 460px;
+    width: 400px;
     margin: auto;
     height: 400px;
     position: relative;
@@ -7,13 +7,6 @@
     animation-duration: 2000ms;
     animation-iteration-count: 1;
     opacity: 1;
-    transform: translate(6px, -2px);
-    .dopdots {
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: auto;
-    }
     @keyframes list {
         0% {
             opacity: 0;

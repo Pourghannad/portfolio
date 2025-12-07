@@ -1,21 +1,21 @@
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
+// import dopDots from "@pourghannad/dopdots";
 import style from "./list.module.scss";
-import dopDots from "@pourghannad/dopdots";
 import { Carousel } from "../Carousel/Carousel";
 
 export default function List() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  useEffect(() => {
-    if (canvasRef.current) {
-      const ctx = canvasRef.current.getContext("2d");
-      if (ctx) {
-        dopDots(ctx);
-      }
-    }
-  }, []);
+  // const canvasRef = useRef<HTMLCanvasElement>(null);
+  // useEffect(() => {
+  //   if (canvasRef.current) {
+  //     const ctx = canvasRef.current.getContext("2d");
+  //     if (ctx) {
+  //       dopDots(ctx);
+  //     }
+  //   }
+  // }, []);
   return (
     <div className={style["list-container"]}>
-      <div className={`dopdots-wrapper ${style["dopdots"]}`}>
+      {/* <div className={`dopdots-wrapper ${style["dopdots"]}`}>
         <canvas
           ref={canvasRef}
           id="dopdots"
@@ -29,7 +29,7 @@ export default function List() {
           data-secondrect="true"
           data-secondcolor="#0c130b"
         ></canvas>
-      </div>
+      </div> */}
       <Carousel />
     </div>
   );

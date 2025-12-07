@@ -3,7 +3,6 @@
 }
 .container {
   display: flex;
-  margin-top: 10px;
   height: 380px;
   flex-direction: column;
   align-items: center;
@@ -18,15 +17,15 @@
 .buttons {
   position: absolute;
   z-index: 1;
-  bottom: 8px;
-  right: 41px;
+  bottom: 0px;
+  right: 10px;
   button {
     cursor: pointer;
     border: 0;
     background: #474c5d;
-    padding: 4px 6px;
-    width: 28px;
-    height: 27px;
+    padding: 0;
+    width: 25px;
+    height: 20px;
     svg {
       width: 14px;
       height: 14px;
@@ -42,8 +41,8 @@
 .filters {
   position: absolute;
   z-index: 1;
-  bottom: 8px;
-  left: 40px;
+  bottom: 0px;
+  left: 10px;
   button {
     border: 0;
     background-color: #363c4f;
@@ -61,6 +60,7 @@
     }
     &.active {
       color: #6ddba9;
+      box-shadow: 0 0 0 1px;
     }
   }
 }
@@ -69,30 +69,34 @@
   display: flex;
   flex-direction: column;
   top: 5px;
-  right: 428px;
+  right: 392px;
   height: 401px;
   flex-wrap: wrap-reverse;
-  background-color: #363c4f;
   min-width: 20px;
+  z-index: 1;
   width: max-content;
-  padding-right: 3px;
-  // &:before {
-  //   position: absolute;
-  //   width: 47px;
-  //   content: "";
-  //   background-color: #363c4f;
-  //   height: calc(100% - 8px);
-  //   z-index: -1;
-  // }
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 16px;
-  //   height: 285px;
-  //   background-color: #363c4f;
-  //   left: -27px;
-  //   z-index: -1;
-  // }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: #363c4f;
+    top: -3px;
+    right: 0;
+  }
+  &.all {
+    &:before {
+      width: 46px;
+      height: 396px;
+      right: 2px;
+      z-index: -1;
+    }
+  }
+  &:after {
+    width: 18px;
+    height: 290px;
+    z-index: -1;
+    right: 40px;
+  }
   .dot {
     width: 9px;
     height: 9px;

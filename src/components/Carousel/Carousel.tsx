@@ -108,7 +108,7 @@ export function Carousel() {
           Open source
         </button>
       </div>
-      <div className={style["dots"]}>
+      <div className={`${style["dots"]} ${style[items.title]}`}>
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}

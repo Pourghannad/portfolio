@@ -4,7 +4,8 @@ export default function Header() {
   return (
     <header className={style["header"]}>
       <h1>
-        MohammadHasan Pourghannad<span></span>
+        {"MohammadHasan Pourghannad"}
+        <span></span>
       </h1>
     </header>
   );

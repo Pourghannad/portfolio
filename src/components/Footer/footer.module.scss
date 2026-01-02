@@ -1,14 +1,29 @@
 footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span {
-        font-family: 'Courier New', Courier, monospace;
-        margin-right: 6px;
-    }
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: footer;
+  animation-duration: 2000ms;
+  animation-delay: 0;
+  span {
+    font-family: "Courier New", Courier, monospace;
+    margin-right: 6px;
+  }
+}
+
+@keyframes footer {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

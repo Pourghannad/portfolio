@@ -17,19 +17,24 @@ function App() {
   }, []);
   return (
     <main>
-      <canvas
-        ref={canvasRef}
-        id="dopdots"
-        width="4000px"
-        height="1900px"
-        data-margin="14"
-        data-type="grid"
-        data-elementsize="9"
-        data-color="#ffffff12"
-        data-elementrect="true"
-        data-secondrect="true"
-        data-secondcolor="#0c130b"
-      ></canvas>
+      <div className="canvas-wrapper">
+        <canvas
+          ref={canvasRef}
+          id="dopdots"
+          width="4000px"
+          height="1900px"
+          data-margin="65"
+          data-type="grid"
+          data-elementsize="3"
+          data-moveradius="90"
+          data-color="#ffffff0f"
+          data-elementrect="true"
+          data-secondrect="false"
+          data-secondcolor="#454d67"
+          data-elementformousemove=".canvas-wrapper"
+        ></canvas>
+
+      </div>
       <Header />
       <List />
       <Footer />

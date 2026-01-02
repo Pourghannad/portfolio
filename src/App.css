@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
 }
-#root main > canvas {
+#root main .canvas-wrapper {
   position: fixed;
   left: 0;
   right: 0;

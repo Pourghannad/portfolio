@@ -137,6 +137,12 @@
       }
     }
   }
+  .member {
+    @media screen and (max-width: 500px) {
+      position: absolute;
+      top: -65px;
+    }
+  }
   .createdat {
     width: 56px;
     height: 27px;
@@ -193,5 +199,8 @@
       filter: invert(0.1) blur(0px);
       opacity: 0.45;
     }
+  }
+  @media screen and (max-width: 500px) {
+    width: 300px;
   }
 }

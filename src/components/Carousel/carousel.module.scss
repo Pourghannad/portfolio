@@ -37,6 +37,9 @@
       }
     }
   }
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 }
 .filters {
   position: absolute;
@@ -57,10 +60,18 @@
     cursor: pointer;
     &:last-of-type {
       width: 70px;
+      margin-right: 0;
     }
     &.active {
       color: #6ddba9;
       box-shadow: 0 0 0 1px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    left: 1px;
+    button {
+      width: 45px;
+      font-size: 11px;
     }
   }
 }
@@ -114,5 +125,8 @@
     100% {
       transform: translate3d(3px, 20px, 0px);
     }
+  }
+  @media screen and (max-width: 500px) {
+    right: 300px;
   }
 }

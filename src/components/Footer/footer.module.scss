@@ -9,10 +9,12 @@ footer {
   justify-content: center;
   animation-name: footer;
   animation-duration: 2000ms;
-  animation-delay: 0;
   span {
     font-family: "Courier New", Courier, monospace;
     margin-right: 6px;
+  }
+  @media screen and (max-width: 500px) {
+    bottom: 30px;
   }
 }
 

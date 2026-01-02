@@ -1,21 +1,29 @@
 .list-container {
-    width: 400px;
-    margin: auto;
-    height: 400px;
-    position: relative;
-    animation-name: list;
-    animation-duration: 2000ms;
-    animation-iteration-count: 1;
-    opacity: 1;
-    @keyframes list {
-        0% {
-            opacity: 0;
-        }
-        80% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
+  width: 400px;
+  margin: auto;
+  height: 400px;
+  position: relative;
+  animation-name: list;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
+  opacity: 1;
+  @keyframes list {
+    0% {
+      opacity: 0;
     }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-left: 12%;
+  }
+  @media screen and (max-width: 500px) {
+    margin-left: 14%;
+    width: 300px;
+  }
 }

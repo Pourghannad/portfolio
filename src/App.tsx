@@ -17,9 +17,6 @@ function App() {
   }, []);
   return (
     <main>
-      <div className="desktop-only">
-        {'Desktop only. Mobile version under development :( '}
-      </div>
       <div className="canvas-wrapper">
         <canvas
           ref={canvasRef}

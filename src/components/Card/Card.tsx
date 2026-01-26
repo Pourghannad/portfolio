@@ -21,7 +21,6 @@ export default function Card(props: ICardProps) {
         {data.name} {data.description && <span>{data.description}</span>}{" "}
       </h4>
       {title === "all" && <span className={style["type"]}>{data.type}</span>}
-      {}
       <div className={style["description"]}>
         {data.technology && data.technology.length > 0 && (
           <div className={style["tech"]}>
@@ -52,7 +51,6 @@ export default function Card(props: ICardProps) {
         )}
       </div>
       {!hasLoaded && <span className={style["image-loading"]} />}
-      {<span className={style["image-loading"]} />}
       {data.images && data.images.length > 0 && (
         <>
           <img
@@ -72,18 +70,6 @@ export default function Card(props: ICardProps) {
           </a>
         </>
       )}
-      {/* {data.images &&
-        data.images?.length > 0 &&
-        data.images?.map((item, index) => {
-          return (
-            <img
-              key={index}
-              src={item}
-              alt={`${data.name}-${index}`}
-              title={`${data.name}-${index}`}
-            />
-          );
-        })} */}
     </div>
   );
 }

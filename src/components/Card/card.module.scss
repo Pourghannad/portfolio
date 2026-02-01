@@ -167,6 +167,12 @@
   }
   .image-loading {
     position: absolute;
+    right: 0;
+    left: 0;
+    svg {
+      width: 80px;
+      height: 80px;
+    }
   }
   &:hover {
     .cover {

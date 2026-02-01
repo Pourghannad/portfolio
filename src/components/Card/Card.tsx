@@ -20,7 +20,11 @@ export default function Card(props: ICardProps) {
       <h4>
         {data.name} {data.description && <span>{data.description}</span>}{" "}
       </h4>
-      {title === "all" && <span className={style["type"]}>{data.type}</span>}
+      {title === "all" && (
+        <span className={style["type"]}>
+          {data.type === "open-source" ? "open source" : data.type}
+        </span>
+      )}
       <div className={style["description"]}>
         {data.technology && data.technology.length > 0 && (
           <div className={style["tech"]}>
@@ -50,7 +54,69 @@ export default function Card(props: ICardProps) {
           </a>
         )}
       </div>
-      {!hasLoaded && <span className={style["image-loading"]} />}
+      {data.images && data.images.length > 0 && !hasLoaded &&
+        <span className={style["image-loading"]}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <rect
+              fill="#fff"
+              stroke="#fff"
+              stroke-width="15"
+              width="30"
+              height="30"
+              x="25"
+              y="50"
+            >
+              <animate
+                attributeName="y"
+                calcMode="spline"
+                dur="2"
+                values="50;120;50;"
+                keySplines=".5 0 .5 1;.5 0 .5 1"
+                repeatCount="indefinite"
+                begin="-.4"
+              ></animate>
+            </rect>
+            <rect
+              fill="#fff"
+              stroke="#fff"
+              stroke-width="15"
+              width="30"
+              height="30"
+              x="85"
+              y="50"
+            >
+              <animate
+                attributeName="y"
+                calcMode="spline"
+                dur="2"
+                values="50;120;50;"
+                keySplines=".5 0 .5 1;.5 0 .5 1"
+                repeatCount="indefinite"
+                begin="-.2"
+              ></animate>
+            </rect>
+            <rect
+              fill="#fff"
+              stroke="#fff"
+              stroke-width="15"
+              width="30"
+              height="30"
+              x="145"
+              y="50"
+            >
+              <animate
+                attributeName="y"
+                calcMode="spline"
+                dur="2"
+                values="50;120;50;"
+                keySplines=".5 0 .5 1;.5 0 .5 1"
+                repeatCount="indefinite"
+                begin="0"
+              ></animate>
+            </rect>
+          </svg>
+        </span>
+      }
       {data.images && data.images.length > 0 && (
         <>
           <img

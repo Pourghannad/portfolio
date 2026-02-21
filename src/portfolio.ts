@@ -643,7 +643,7 @@ export const portfolio = [
     description: "",
     createdAt: "2016",
     link: "",
-    images: ["./img/bazitak.jpg"],
+    images: ["./img/bazitak-1.jpg"],
   },
   {
     name: "90theme V2",

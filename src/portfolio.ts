@@ -1,5 +1,15 @@
 export const portfolio = [
   {
+    name: "Gold Price",
+    type: "open-source",
+    development: "Pourghannad",
+    technology: ["React", "PHP"],
+    description: "",
+    createdAt: "2026",
+    link: "http://azard.net/g/",
+    images: ["./img/gold-price-1.png"],
+  },
+  {
     name: "Htmliha",
     type: "open-source",
     development: "Pourghannad",

@@ -1,5 +1,16 @@
 export const portfolio = [
   {
+    name: "Budi landing",
+    type: "website",
+    development: "Pourghannad",
+    design: "Hamrahtel team",
+    technology: ["React", "Typescript", "Tailwind"],
+    description: "",
+    createdAt: "2026",
+    link: "https://hamrahtel.com/landing/budi",
+    images: ["./img/budi-1.png"],
+  },
+  {
     name: "Gold Price",
     type: "open-source",
     development: "Pourghannad",

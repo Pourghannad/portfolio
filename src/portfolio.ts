@@ -290,7 +290,7 @@ export const portfolio = [
     technology: ["html", "css"],
     description: "",
     createdAt: "2021",
-    link: "https://4896.top",
+    link: "https://azardnet.github.io/4896-home/",
     images: ["./img/4896.png"],
   },
   {

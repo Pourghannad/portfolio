@@ -1,5 +1,15 @@
 export const portfolio = [
   {
+    name: "se3 (Beta)",
+    type: "website",
+    development: "Pourghannad",
+    technology: ["VanillaJs", "PHP"],
+    description: "",
+    createdAt: "2026",
+    link: "https://se3.ir",
+    images: ["./img/se3-1.png"],
+  },
+  {
     name: "Budi landing",
     type: "website",
     development: "Pourghannad",
@@ -167,7 +177,7 @@ export const portfolio = [
     images: ["./img/ucube-landing.png"],
   },
   {
-    name: "panj.monster",
+    name: "panj.monster Landing",
     type: "website",
     design: "Pourghannad",
     development: "Pourghannad",
